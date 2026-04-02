@@ -9,32 +9,45 @@ export default function AboutPage() {
         <div className="space-y-8 md:space-y-10">
           <ProfileImage />
 
-          <div className="space-y-6 md:space-y-7 text-justify font-serif">
-          <p className="text-[10px] md:text-xs leading-relaxed text-[#6E6763]">
-            I am a Master's student in Data Science at EPFL and a visiting
-            researcher at MIT. My work explores agentic systems and the broader
-            questions that animate them: what intelligence is, what computation
-            is, and how intelligence may be understood through the lens of
-            computation. These questions resonate with the philosophical concerns
-            that drive thinkers like Blaise Agüera y Arcas, who asks fundamental
-            questions about the nature of mind and machine.
-          </p>
+          <div className="space-y-6 md:space-y-8 text-left font-serif">
+            <p className="text-sm md:text-base leading-relaxed text-[#262424]">
+              I am a Visiting Researcher at MIT, advised by Pierfrancesco
+              Beneventano and Tomaso Poggio, and a Master&apos;s student in Data
+              Science at EPFL. My work explores{" "}
+              <span className="text-[#262424]">agentic systems</span>, the
+              fundamental limits of AI, and the theoretical questions that surround
+              them: what intelligence is, what computation is, and how intelligence
+              may be understood through the lens of computation. 🧠
+            </p>
 
-          <p className="text-[10px] md:text-xs leading-relaxed text-[#6E6763]">
-            I am drawn to problems at the intersection of theory and practice—where
-            abstract principles about learning, adaptation, and reasoning meet the
-            challenge of building systems that actually work. This is why I think
-            carefully about architecture, about the role of structure in enabling
-            intelligence, and about how iteration refines understanding. I believe
-            that how we build systems shapes what kinds of intelligence emerge from them.
-          </p>
+            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
+              Previously, at Logitech&apos;s CTO Office, I worked with Jonathan Dan
+              on foundation models; at Idiap, with Phil Garner, I worked on
+              bio-inspired text-to-speech and spiking neural networks.
+            </p>
 
-          <p className="text-[10px] md:text-xs leading-relaxed text-[#6E6763]">
-            Photography is how I see the world—an attentiveness to light, moment,
-            and attention itself. Music is how I think in time. Landscapes and outdoor
-            life ground me in physicality and movement, reminding me that understanding
-            is not only intellectual but embodied.
-          </p>
+            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
+              My academic path has moved across disciplines without ever really
+              changing its direction: Politecnico di Milano (BSc in Engineering
+              Physics), ETH Zurich / EPFL / PSI (MSc in Nuclear Engineering), and
+              EPFL (MSc Neuro-X in Data Science and Computational Neuroscience).
+              Still the same person; the questions just got nosier. 🐇
+            </p>
+
+            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
+              Alongside research,{" "}
+              <span className="text-[#262424]">photography</span> 📷 and{" "}
+              <span className="text-[#262424]">music</span> 🎵 are part of how I pay
+              attention to the world. I included them on this site because they say
+              something that a CV cannot: how I notice, frame, and stay with things.
+              These pages are a way to know me not only professionally, but also a
+              little more personally.
+            </p>
+
+            <p className="text-sm md:text-base leading-relaxed text-[#262424] pt-2 border-t border-[#DDD4CE]/50">
+              If you&apos;d like to collaborate or exchange ideas, say hi — coffee
+              optional. ☕
+            </p>
           </div>
         </div>
       </ContentContainer>
