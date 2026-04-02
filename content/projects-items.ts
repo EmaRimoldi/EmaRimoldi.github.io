@@ -14,41 +14,44 @@ export interface ResearchItem {
 
 export const projectsItems: ResearchItem[] = [
   {
-    id: "research-1",
-    title: "On Emergent Behavior in Hierarchical Systems",
-    descriptor: "A theoretical study of how organization creates intelligence.",
+    id: "claude-scholar-extended",
+    title: "ALETHEIA (Claude Scholar extended)",
+    descriptor:
+      "Semi-automated research assistant: literature, novelty gates, experiments, SLURM, analysis, and manuscript workflow for Claude Code.",
     summary:
-      "This research explores the emergence of complex behavior from hierarchical organization principles, with applications to both biological and artificial systems.",
-    year: 2024,
-    tags: ["complexity", "emergence", "systems"],
+      "Extends the Claude Scholar ecosystem into a checkpointed v3 pipeline—from research landscape and experiment design through cluster execution, strict analysis, and /verify-paper—with Obsidian/Zotero integration and human-in-the-loop decisions. Installable as a plugin bundle for ~/.claude; state lives in pipeline-state.json and project dirs under projects/<slug>/.",
+    year: 2026,
+    tags: ["Claude Code", "research pipeline", "literature", "experiments"],
     links: {
-      paper: "#",
-      notes: "#",
+      code: "https://github.com/EmaRimoldi/Claude-scholar-extended",
+      notes: "https://github.com/EmaRimoldi/Claude-scholar-extended/blob/main/docs/QUICKSTART.md",
     },
   },
   {
-    id: "research-2",
-    title: "Learning and Generalization in Sparse Environments",
-    descriptor: "How intelligent systems acquire knowledge under data scarcity.",
+    id: "agent-parallelization",
+    title: "Agent parallelization",
+    descriptor:
+      "Parallel Claude Code sub-agents with isolated git worktrees and SLURM workers for NanoGPT hyperparameter search.",
     summary:
-      "Investigation into how inductive biases and structural priors enable learning with limited data, inspired by biological cognition.",
-    year: 2024,
-    tags: ["learning", "generalization", "inductive bias"],
+      "Spawns N independent agents, each with its own GPU budget and exploration loop (edit train.py, train, keep or reset). After parallel search, a merge phase aggregates trajectories; includes budgeting from GPU allocation time, merge protocol docs, and benchmarks for parallelism capacity on Engaging-style clusters.",
+    year: 2026,
+    tags: ["Claude Code", "SLURM", "NanoGPT", "hyperparameters"],
     links: {
-      paper: "#",
-      code: "#",
+      code: "https://github.com/EmaRimoldi/agent_parallelization",
+      notes: "https://github.com/EmaRimoldi/agent_parallelization/tree/master/docs",
     },
   },
   {
-    id: "research-3",
-    title: "Biological Principles for Artificial Intelligence",
-    descriptor: "A synthesis of neuroscience and machine learning.",
+    id: "hatelens",
+    title: "HateLens",
+    descriptor:
+      "Tiny decoder-only LLMs with LoRA for hate speech detection and LIME-based explanations.",
     summary:
-      "This work examines principles from neuroscience that could improve the design of artificial intelligence systems, focusing on robustness and adaptability.",
-    year: 2023,
-    tags: ["neuroscience", "AI", "principles"],
+      "Course project pipeline on DynaHate and HateCheck: parameter-efficient fine-tuning of compact models, evaluation, and token-level LIME attributions for transparent moderation-oriented classification—balancing accuracy with interpretability and light compute.",
+    year: 2024,
+    tags: ["PyTorch", "LoRA", "LIME", "NLP"],
     links: {
-      notes: "#",
+      code: "https://github.com/EmaRimoldi/HateLens",
     },
   },
 ];

@@ -2,8 +2,8 @@
 
 import { SocialLinks } from "@/components/social-links";
 
-/** Stagger delay between text blocks (deciseconds: 0.1s per step). */
-const STEP_S = 0.1;
+/** Delay between each text block (seconds). */
+const STEP_S = 0.5;
 
 export function HomeHero() {
   const delay = (step: number) => ({ animationDelay: `${step * STEP_S}s` });
