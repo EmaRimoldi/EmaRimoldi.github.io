@@ -1,21 +1,25 @@
 import Link from "next/link";
-import { Github, Linkedin, Instagram } from "lucide-react";
 import { socialLinksConfig } from "@/lib/site-config";
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+} from "@/components/social-brand-icons";
 
 const iconMap = {
-  github: Github,
-  linkedin: Linkedin,
-  instagram: Instagram,
+  github: GitHubIcon,
+  linkedin: LinkedInIcon,
+  instagram: InstagramIcon,
 } as const;
 
 type IconName = keyof typeof iconMap;
 
-export function SocialLinks() {
-  const socialLinks = socialLinksConfig;
+const iconClass = "h-5 w-5 md:h-6 md:w-6";
 
+export function SocialLinks() {
   return (
-    <div className="flex justify-center gap-8 md:gap-10">
-      {socialLinks.map((link) => {
+    <div className="flex justify-center gap-7 md:gap-9">
+      {socialLinksConfig.map((link) => {
         const Icon = iconMap[link.icon as IconName];
         return (
           <Link
@@ -24,9 +28,9 @@ export function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.name}
-            className="text-[#262424] transition-opacity duration-200 hover:opacity-60"
+            className="text-[#262424] transition-opacity duration-200 hover:opacity-60 p-1.5 -m-1.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
-            <Icon size={32} className="md:w-8 md:h-8" />
+            <Icon className={iconClass} />
           </Link>
         );
       })}

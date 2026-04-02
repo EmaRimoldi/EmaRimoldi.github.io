@@ -13,8 +13,8 @@ export const contactConfig = {
   },
   github: {
     label: "GitHub",
-    value: "@emanuelerimoldi",
-    href: "https://github.com/emanuelerimoldi",
+    value: "@EmaRimoldi",
+    href: "https://github.com/EmaRimoldi",
     icon: "github",
   },
   linkedin: {
