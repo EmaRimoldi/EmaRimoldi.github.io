@@ -2,6 +2,11 @@ import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { ProfileImage } from "@/components/profile-image";
 
+const SCHOLAR_BENEVENTANO =
+  "https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en";
+const SCHOLAR_POGGIO =
+  "https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en";
+
 export default function AboutPage() {
   return (
     <PageShell>
@@ -9,44 +14,50 @@ export default function AboutPage() {
         <div className="space-y-8 md:space-y-10">
           <ProfileImage />
 
-          <div className="space-y-6 md:space-y-8 text-left font-serif">
-            <p className="text-sm md:text-base leading-relaxed text-[#262424]">
-              I am a Visiting Researcher at MIT, advised by Pierfrancesco
-              Beneventano and Tomaso Poggio, and a Master&apos;s student in Data
-              Science at EPFL. My work explores{" "}
-              <span className="text-[#262424]">agentic systems</span>, the
-              fundamental limits of AI, and the theoretical questions that surround
-              them: what intelligence is, what computation is, and how intelligence
-              may be understood through the lens of computation. 🧠
+          <div className="space-y-5 md:space-y-6 text-left font-serif text-xs md:text-sm leading-relaxed text-[#6E6763]">
+            <p>
+              Visiting researcher at MIT, working with{" "}
+              <a
+                href={SCHOLAR_BENEVENTANO}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#262424] underline decoration-[#DDD4CE] underline-offset-2 hover:opacity-70 transition-opacity"
+              >
+                Pierfrancesco Beneventano
+              </a>{" "}
+              and{" "}
+              <a
+                href={SCHOLAR_POGGIO}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#262424] underline decoration-[#DDD4CE] underline-offset-2 hover:opacity-70 transition-opacity"
+              >
+                Tomaso Poggio
+              </a>
+              ; MSc in Data Science at EPFL. I study agentic systems, the limits
+              of AI, and what it means to treat intelligence through the lens of
+              computation. 🧠
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
-              Previously, at Logitech&apos;s CTO Office, I worked with Jonathan Dan
-              on foundation models; at Idiap, with Phil Garner, I worked on
-              bio-inspired text-to-speech and spiking neural networks.
+            <p>
+              Before that: foundation models at Logitech&apos;s CTO Office (with
+              Jonathan Dan); bio-inspired TTS and spiking networks at Idiap (with
+              Phil Garner).
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
-              My academic path has moved across disciplines without ever really
-              changing its direction: Politecnico di Milano (BSc in Engineering
-              Physics), ETH Zurich / EPFL / PSI (MSc in Nuclear Engineering), and
-              EPFL (MSc Neuro-X in Data Science and Computational Neuroscience).
-              Still the same person; the questions just got nosier. 🐇
+            <p>
+              Path: Polimi (BSc, engineering physics) → ETH / EPFL / PSI (MSc,
+              nuclear engineering) → EPFL Neuro-X. Same curiosity, sharper
+              questions. 🐇
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed text-[#6E6763]">
-              Alongside research,{" "}
-              <span className="text-[#262424]">photography</span> 📷 and{" "}
-              <span className="text-[#262424]">music</span> 🎵 are part of how I pay
-              attention to the world. I included them on this site because they say
-              something that a CV cannot: how I notice, frame, and stay with things.
-              These pages are a way to know me not only professionally, but also a
-              little more personally.
+            <p>
+              Photography and music here are not decoration—they are how I notice
+              light, time, and attention. 📷 🎵
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed text-[#262424] pt-2 border-t border-[#DDD4CE]/50">
-              If you&apos;d like to collaborate or exchange ideas, say hi — coffee
-              optional. ☕
+            <p className="text-[#262424] pt-2 border-t border-[#DDD4CE]/50">
+              Collaborations and ideas welcome — say hi. ☕
             </p>
           </div>
         </div>
