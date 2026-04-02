@@ -20,7 +20,7 @@ export const contactConfig = {
   linkedin: {
     label: "LinkedIn",
     value: "Emanuele Rimoldi",
-    href: "https://www.linkedin.com/in/emanuelerimoldi",
+    href: "https://www.linkedin.com/in/emanuele-rimoldi",
     icon: "linkedin",
   },
   instagram: {
