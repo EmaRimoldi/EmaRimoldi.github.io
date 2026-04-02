@@ -15,24 +15,26 @@ export default function BlogPage() {
     <PageShell>
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
         {/* Tab Navigation */}
-        <div className="mb-12 md:mb-16">
-          <div className="flex gap-3 justify-center">
+        <div className="mb-14 md:mb-16">
+          <div className="flex flex-wrap gap-2 justify-center items-center">
             <button
+              type="button"
               onClick={() => setActiveTab("posts")}
-              className={`px-6 md:px-7 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-sm md:text-base tracking-wide transition-all duration-300 ${
                 activeTab === "posts"
-                  ? "bg-[#E8E1DA] text-[#262424]"
-                  : "text-[#6E6763] hover:text-[#262424]"
+                  ? "bg-[#E4DDD4] text-[#262424] shadow-sm"
+                  : "text-[#6E6763] hover:text-[#262424] hover:bg-[#EDE8E2]/50"
               }`}
             >
               Posts
             </button>
             <button
+              type="button"
               onClick={() => setActiveTab("recommendations")}
-              className={`px-6 md:px-7 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-sm md:text-base tracking-wide transition-all duration-300 ${
                 activeTab === "recommendations"
-                  ? "bg-[#E8E1DA] text-[#262424]"
-                  : "text-[#6E6763] hover:text-[#262424]"
+                  ? "bg-[#E4DDD4] text-[#262424] shadow-sm"
+                  : "text-[#6E6763] hover:text-[#262424] hover:bg-[#EDE8E2]/50"
               }`}
             >
               Personal Recommendations
@@ -42,24 +44,23 @@ export default function BlogPage() {
 
         {/* Posts Tab Content */}
         {activeTab === "posts" && (
-          <section>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
-              {blogPosts.map((post) => (
-                <BlogCard
-                  key={post.slug}
-                  title={post.title}
-                  description={post.description}
-                  href={post.href}
-                />
-              ))}
-            </div>
+          <section className="max-w-3xl mx-auto border-t border-[#DDD4CE]/80">
+            {blogPosts.map((post, i) => (
+              <BlogCard
+                key={post.slug}
+                index={i}
+                title={post.title}
+                description={post.description}
+                href={post.href}
+              />
+            ))}
           </section>
         )}
 
         {/* Personal Recommendations Tab Content */}
         {activeTab === "recommendations" && (
           <section className="max-w-2xl mx-auto">
-            <ul className="space-y-2 list-disc list-inside text-xs md:text-sm leading-relaxed font-sans text-justify">
+            <ul className="space-y-5 list-disc list-inside text-sm md:text-base leading-relaxed font-serif text-[#262424] text-left pl-1">
               <li className="text-[#262424]">
                 <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">Gödel, Escher, Bach</a>: A spiraling exploration of patterns, self-reference, and consciousness; how meaning emerges from the interplay of formal systems.
               </li>

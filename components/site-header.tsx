@@ -17,7 +17,7 @@ export function SiteHeader() {
           {!isHomepage ? (
             <Link
               href="/"
-              className="font-mono text-sm md:text-base lg:text-lg font-normal text-[#262424] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap"
+              className="font-serif text-sm md:text-base lg:text-lg font-medium text-[#262424] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap tracking-tight"
             >
               {siteConfig.name}
             </Link>
@@ -26,7 +26,7 @@ export function SiteHeader() {
           )}
 
           {/* Navigation — centered when on homepage, right-side on subpages */}
-          <div className={`flex flex-wrap gap-6 md:gap-8 lg:gap-10 font-sans ${isHomepage ? "flex-1 justify-center" : ""}`}>
+          <div className={`flex flex-wrap gap-6 md:gap-8 lg:gap-10 font-serif ${isHomepage ? "flex-1 justify-center" : ""}`}>
             {navItems.map((item) => {
               const isActive =
                 (item.href === "/" && pathname === "/") ||

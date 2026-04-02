@@ -14,9 +14,8 @@ const config: Config = {
         "site-line": "#DDD4CE",
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "serif"],
-        sans: ["Inter", "sans-serif"],
-        mono: ["Space Mono", "monospace"],
+        serif: ["Cormorant Garamond", "ui-serif", "Georgia", "serif"],
+        sans: ["ui-sans-serif", "system-ui", "sans-serif"],
       },
       maxWidth: {
         site: "1280px",

@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="space-y-8 md:space-y-10">
           <ProfileImage />
 
-          <div className="space-y-6 md:space-y-7 text-justify font-sans">
+          <div className="space-y-6 md:space-y-7 text-justify font-serif">
           <p className="text-[10px] md:text-xs leading-relaxed text-[#6E6763]">
             I am a Master's student in Data Science at EPFL and a visiting
             researcher at MIT. My work explores agentic systems and the broader
