@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Personal website for Emanuele Rimoldi",
   "scripts": {
+    "fetch-covers": "node scripts/fetch-spotify-oembed-covers.mjs",
+    "prebuild": "npm run fetch-covers",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
