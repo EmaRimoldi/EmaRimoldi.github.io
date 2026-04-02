@@ -9,8 +9,7 @@ export default function MusicPage() {
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
         <p className="text-base md:text-lg text-[#262424] leading-relaxed mb-12 max-w-2xl font-serif">
           A curated collection of albums and artists that resonate with my
-          creative practice and intellectual interests. Artwork is loaded from
-          Spotify via the public oEmbed API at build time (no account required).
+          creative practice and intellectual interests.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">

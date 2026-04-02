@@ -15,9 +15,9 @@ export interface ResearchItem {
 export const projectsItems: ResearchItem[] = [
   {
     id: "claude-scholar-extended",
-    title: "ALETHEIA (Claude Scholar extended)",
+    title: "ALETHEIA",
     descriptor:
-      "Semi-automated research assistant: literature, novelty gates, experiments, SLURM, analysis, and manuscript workflow for Claude Code.",
+      "Semi-automated research assistant: from a first research idea to experiments, analysis, and a submission-ready paper—with literature, novelty gates, and human checkpoints along the way.",
     summary:
       "Extends the Claude Scholar ecosystem into a checkpointed v3 pipeline—from research landscape and experiment design through cluster execution, strict analysis, and /verify-paper—with Obsidian/Zotero integration and human-in-the-loop decisions. Installable as a plugin bundle for ~/.claude; state lives in pipeline-state.json and project dirs under projects/<slug>/.",
     year: 2026,

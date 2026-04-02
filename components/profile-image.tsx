@@ -10,7 +10,7 @@ export function ProfileImage() {
     <div className="flex justify-center mb-8">
       {!imageError ? (
         <img
-          src="/images/about/profile.jpg"
+          src="/images/about/id.png"
           alt="Emanuele Rimoldi portrait"
           className={`w-48 h-48 md:w-56 md:h-56 object-cover rounded-lg shadow-sm transition-opacity duration-300 ${
             imageLoaded ? "opacity-100" : "opacity-0"

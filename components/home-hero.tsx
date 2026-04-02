@@ -22,22 +22,32 @@ export function HomeHero() {
           className="home-soft-reveal text-lg md:text-xl text-[#6E6763] max-w-xl mx-auto leading-relaxed"
           style={delay(1)}
         >
-          AI researcher exploring intelligence, learning, and biological computation.
+          AI researcher exploring intelligence, learning, and the mathematical
+          foundations of theory and computation.
         </p>
 
-        <blockquote className="max-w-2xl mx-auto py-6 md:py-8">
+        <blockquote className="max-w-2xl mx-auto py-6 md:py-8 space-y-4">
           <p
             className="home-soft-reveal italic text-xl md:text-2xl lg:text-3xl text-[#262424] leading-[1.55]"
             style={delay(2)}
           >
-            A temporary placeholder for future editorial text or a guiding statement.
+            We can only see a short distance ahead, but we can see plenty there
+            that needs to be done.
           </p>
+          <footer
+            className="home-soft-reveal text-sm md:text-base not-italic text-[#6E6763]"
+            style={delay(3)}
+          >
+            — Alan Turing,{" "}
+            <cite className="not-italic">Computing Machinery and Intelligence</cite>{" "}
+            (1950)
+          </footer>
         </blockquote>
       </div>
 
       <div
         className="home-soft-reveal mt-16 md:mt-20 mb-16 md:mb-20"
-        style={delay(3)}
+        style={delay(4)}
       >
         <SocialLinks />
       </div>

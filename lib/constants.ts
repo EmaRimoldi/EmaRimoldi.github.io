@@ -2,7 +2,8 @@ import { socialLinksConfig } from "./site-config";
 
 export const siteConfig = {
   name: "Emanuele Rimoldi",
-  description: "AI researcher exploring intelligence, learning, and biological computation.",
+  description:
+    "AI researcher exploring intelligence, learning, and the mathematical foundations of theory and computation.",
   author: "Emanuele Rimoldi",
   url: "https://emarimoldi.github.io",
   og: {
