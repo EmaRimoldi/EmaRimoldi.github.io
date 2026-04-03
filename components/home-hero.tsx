@@ -1,7 +1,6 @@
 "use client";
 
 import { HeroCornerFrame } from "@/components/decorative-elements";
-import { DecorativeRule } from "@/components/page-header";
 import { SocialLinks } from "@/components/social-links";
 
 /** Delay between each text block (seconds). */
@@ -30,44 +29,26 @@ export function HomeHero() {
           theory, agents, and the mathematical foundations of computation.
         </p>
 
-        <div
-          className="home-soft-reveal flex justify-center py-2 md:py-3"
+        <blockquote
+          className="home-soft-reveal mx-auto max-w-2xl space-y-3 px-5 py-2 md:px-8 md:py-4"
           style={delay(2)}
-          aria-hidden
         >
-          <DecorativeRule className="opacity-85" />
-        </div>
-
-        <div
-          className="home-soft-reveal relative w-full"
-          style={delay(3)}
-        >
-          <span
-            className="pointer-events-none absolute top-8 bottom-8 left-8 hidden w-px bg-gradient-to-b from-transparent via-[#C9B5A0]/45 to-transparent md:block"
-            aria-hidden
-          />
-          <span
-            className="pointer-events-none absolute top-8 bottom-8 right-8 hidden w-px bg-gradient-to-b from-transparent via-[#C9B5A0]/45 to-transparent md:block"
-            aria-hidden
-          />
-          <blockquote className="relative z-10 mx-auto max-w-2xl space-y-3 px-10 py-5 sm:px-14 md:px-20 md:py-6">
-            <p className="italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]">
-              All models are wrong, but some are useful.
-            </p>
-            <footer className="text-[11px] md:text-xs not-italic text-[#6E6763]">
-              <cite className="not-italic">George E. P. Box</cite>,{" "}
-              <cite className="not-italic">
-                Empirical Model-Building and Response Surfaces
-              </cite>{" "}
-              (1987)
-            </footer>
-          </blockquote>
-        </div>
+          <p className="italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]">
+            All models are wrong, but some are useful.
+          </p>
+          <footer className="text-[11px] md:text-xs not-italic text-[#6E6763]">
+            <cite className="not-italic">George E. P. Box</cite>,{" "}
+            <cite className="not-italic">
+              Empirical Model-Building and Response Surfaces
+            </cite>{" "}
+            (1987)
+          </footer>
+        </blockquote>
       </div>
 
       <div
         className="home-soft-reveal relative z-10 mt-16 md:mt-20 mb-16 md:mb-20"
-        style={delay(4)}
+        style={delay(3)}
       >
         <SocialLinks />
       </div>

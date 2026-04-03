@@ -62,13 +62,3 @@ export function FooterOrnament() {
     </div>
   );
 }
-
-/** Hairline under page intro subtitle — same tone as `page-header-editorial` bottom rule */
-export function PageIntroFlourish() {
-  return (
-    <div
-      className="mt-6 h-px w-full bg-[#DDD4CE]/80 md:mt-7"
-      aria-hidden
-    />
-  );
-}

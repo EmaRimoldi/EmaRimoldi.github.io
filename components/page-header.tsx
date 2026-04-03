@@ -1,40 +1,41 @@
 import type { ReactNode } from "react";
-import { PageIntroFlourish } from "@/components/decorative-elements";
 
-/** Minimal chapter-style divider — bronze ink on paper */
+/** Minimal chapter-style divider — fine bronze hairlines and small center mark */
 export function DecorativeRule({ className = "" }: { className?: string }) {
   return (
     <svg
-      className={`h-5 w-36 shrink-0 text-[#C9B5A0] ${className}`}
-      viewBox="0 0 144 16"
+      className={`h-4 w-32 shrink-0 text-[#C9B5A0] ${className}`}
+      viewBox="0 0 128 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
       <line
         x1="0"
-        y1="8"
-        x2="56"
-        y2="8"
+        y1="7"
+        x2="50"
+        y2="7"
         stroke="currentColor"
-        strokeWidth="0.9"
+        strokeWidth="0.45"
         strokeLinecap="round"
-        opacity={0.85}
+        vectorEffect="non-scaling-stroke"
+        opacity={0.65}
       />
       <line
-        x1="88"
-        y1="8"
-        x2="144"
-        y2="8"
+        x1="78"
+        y1="7"
+        x2="128"
+        y2="7"
         stroke="currentColor"
-        strokeWidth="0.9"
+        strokeWidth="0.45"
         strokeLinecap="round"
-        opacity={0.85}
+        vectorEffect="non-scaling-stroke"
+        opacity={0.65}
       />
       <path
-        d="M72 5.5l2.8 2.5L72 10.5l-2.8-2.5L72 5.5z"
+        d="M64 4.8l2.2 2L64 8.8l-2.2-2L64 4.8z"
         fill="currentColor"
-        fillOpacity={0.75}
+        fillOpacity={0.55}
       />
     </svg>
   );
@@ -47,8 +48,6 @@ type PageHeaderProps = {
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
-  /** Hairline under subtitle (off when `page-header-editorial` supplies the bottom rule) */
-  showIntroFlourish?: boolean;
 };
 
 export function PageHeader({
@@ -57,13 +56,9 @@ export function PageHeader({
   subtitle,
   align = "left",
   className = "",
-  showIntroFlourish = true,
 }: PageHeaderProps) {
   const center = align === "center";
   const showTitle = title != null && title !== "";
-  const editorial = className.includes("page-header-editorial");
-  const showFlourish =
-    showIntroFlourish && subtitle != null && !editorial;
 
   return (
     <header
@@ -81,7 +76,6 @@ export function PageHeader({
           {subtitle}
         </p>
       ) : null}
-      {showFlourish ? <PageIntroFlourish /> : null}
     </header>
   );
 }
