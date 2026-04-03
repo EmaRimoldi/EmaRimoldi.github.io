@@ -1,17 +1,10 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
-import { PageHeader } from "@/components/page-header";
 
 export default function PhotographyPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
-        <PageHeader
-          eyebrow="Visual"
-          title="Photography"
-          subtitle="A curated gallery is in progress. Thank you for your patience."
-        />
-
         <div className="max-w-2xl mb-12 md:mb-14 space-y-3 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
           <p className="text-[#262424]">
             This section will host selected prints and series. For now, placeholders

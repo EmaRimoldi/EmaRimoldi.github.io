@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
-import { PageHeader } from "@/components/page-header";
 import { BlogCard } from "@/components/blog-card";
 import { blogPosts } from "@/content/blog-posts";
 
@@ -15,13 +14,6 @@ export default function BlogPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
-        <PageHeader
-          align="center"
-          eyebrow="Writing"
-          title="Blog"
-          subtitle="Notes on intelligence, structure, and reading."
-        />
-
         <div className="mb-12 md:mb-14 flex flex-wrap gap-2 justify-center items-center">
           <button
             type="button"
