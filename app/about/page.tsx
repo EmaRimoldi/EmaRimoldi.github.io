@@ -37,7 +37,18 @@ export default function AboutPage() {
         <PageHeader
           className="page-header-editorial"
           eyebrow="About"
-          title="Hi there, I'm Emanuele!"
+          title={
+            <>
+              Hi there, I&apos;m Emanuele!{" "}
+              <span
+                className="about-wave-emoji"
+                role="img"
+                aria-label="Waving hand"
+              >
+                👋🏻
+              </span>
+            </>
+          }
         />
 
         <div className="about-bio space-y-6 md:space-y-7 text-left font-serif text-sm md:text-[0.95rem] leading-[1.72] text-[#6E6763]">

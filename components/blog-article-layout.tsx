@@ -4,6 +4,7 @@ import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { DecorativeRule } from "@/components/page-header";
 import { BlogPostMetaLine } from "@/components/blog-post-meta";
+import { BlogReferences } from "@/components/blog-references";
 import type { BlogPost } from "@/content/blog-posts";
 
 export function BlogArticleLayout({
@@ -34,6 +35,9 @@ export function BlogArticleLayout({
           </header>
 
           <div className="blog-article-body">{children}</div>
+          {post.references && post.references.length > 0 ? (
+            <BlogReferences items={post.references} />
+          ) : null}
         </article>
 
         <div className="blog-article-footer-nav mt-20 border-t border-[#DDD4CE]/50 pt-10">
