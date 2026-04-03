@@ -31,16 +31,17 @@ export function HomeHero() {
             className="home-soft-reveal italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]"
             style={delay(2)}
           >
-            We can only see a short distance ahead, but we can see plenty there
-            that needs to be done.
+            The purpose of computing is insight, not numbers.
           </p>
           <footer
             className="home-soft-reveal text-[11px] md:text-xs not-italic text-[#6E6763]"
             style={delay(3)}
           >
-            — Alan Turing,{" "}
-            <cite className="not-italic">Computing Machinery and Intelligence</cite>{" "}
-            (1950)
+            — Richard W. Hamming,{" "}
+            <cite className="not-italic">
+              Numerical Methods for Scientists and Engineers
+            </cite>{" "}
+            (1962)
           </footer>
         </blockquote>
       </div>

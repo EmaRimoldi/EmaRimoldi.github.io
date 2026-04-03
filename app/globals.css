@@ -79,6 +79,18 @@ body {
   }
 
   /* About: subtle editorial frame — one accent, no heavy boxes */
+  .about-page-intro {
+    @apply mb-10 md:mb-14 pb-8 md:pb-10 border-b border-[#DDD4CE]/80;
+  }
+
+  .about-page-eyebrow {
+    @apply font-serif text-[0.65rem] uppercase tracking-[0.22em] text-[#9A928A] mb-3;
+  }
+
+  .about-page-heading {
+    @apply font-serif text-2xl md:text-[1.9rem] text-[#262424] leading-[1.18] tracking-tight max-w-[28ch];
+  }
+
   .about-bio {
     @apply relative pl-5 md:pl-7 border-l-[3px] border-[#C9B5A0]/70;
   }
@@ -89,6 +101,14 @@ body {
 
   .about-bio-section-label {
     @apply font-serif text-[0.65rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
+  }
+
+  .about-education-block {
+    @apply space-y-4 pt-1;
+  }
+
+  .about-education-block .about-bio-section-label {
+    @apply mb-3 md:mb-4;
   }
 
   .about-contact-link {
