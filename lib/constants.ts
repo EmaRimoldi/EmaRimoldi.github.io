@@ -3,7 +3,7 @@ import { socialLinksConfig } from "./site-config";
 export const siteConfig = {
   name: "Emanuele Rimoldi",
   description:
-    "AI researcher exploring intelligence, learning, and useful models — theory, agents, and the mathematical foundations of computation.",
+    "AI researcher exploring intelligence, learning, and useful models: theory, agents, and the mathematical foundations of computation.",
   author: "Emanuele Rimoldi",
   url: "https://emarimoldi.github.io",
   og: {

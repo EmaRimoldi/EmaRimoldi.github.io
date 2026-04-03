@@ -1,14 +1,10 @@
-import { PageShell } from "@/components/page-shell";
-import { ContentContainer } from "@/components/content-container";
-import { DecorativeRule } from "@/components/page-header";
-import { BlogPostMetaLine } from "@/components/blog-post-meta";
+import { BlogArticleLayout } from "@/components/blog-article-layout";
 import { getBlogPost } from "@/content/blog-posts";
-import Link from "next/link";
 
 const slug = "biological-computation" as const;
 const post = getBlogPost(slug)!;
 
-const articleBody = `We tend to think of computation as a clean, abstract process: input, algorithm, output. This view comes from logic and mathematics, from Turing machines and formal systems. But biological computation—the way brains and bodies solve problems—is profoundly different.
+const articleBody = `We tend to think of computation as a clean, abstract process: input, algorithm, output. This view comes from logic and mathematics, from Turing machines and formal systems. But biological computation (the way brains and bodies solve problems) is profoundly different.
 
 Biological systems do not compute in isolation. They are embedded in continuous environments, continuously coupled with the world. A brain does not process discrete inputs in a pipeline; it samples from a complex, dynamic environment and simultaneously generates motor output that shapes what it encounters next. This is a loop, not a pipeline.
 
@@ -22,13 +18,13 @@ Furthermore, biological computation is fundamentally analog and continuous. Whil
 
 Another crucial difference: biological systems learn and compute simultaneously. There is no clean separation between the learning phase and the inference phase. A brain is always adjusting its internal structure based on experience, even during ongoing behavior. This stands in stark contrast to typical machine learning, where systems learn during training, then their parameters are fixed for deployment.
 
-Also, biological systems are massively parallel and distributed. There is no central processor. Every neuron is simultaneously receiving input from thousands of others and sending output to thousands more. Computation is distributed across vast networks, with no single point of control. This distributed architecture provides robustness—local damage does not necessarily degrade the whole system—and scalability.
+Also, biological systems are massively parallel and distributed. There is no central processor. Every neuron is simultaneously receiving input from thousands of others and sending output to thousands more. Computation is distributed across vast networks, with no single point of control. This distributed architecture provides robustness: local damage does not necessarily degrade the whole system, and scalability.
 
 The energy efficiency of biological systems is also worth noting. A brain uses roughly 20 watts of power. Our largest artificial neural networks use megawatts. The efficiency comes not from having fewer neurons, but from a fundamentally different computational approach: sparse activation, analog rather than digital representations, and continual recycling of neural activity rather than reading it out to discrete outputs.
 
 What does this mean for understanding intelligence? It suggests that some of our assumptions about computation are parochial. Computation doesn't require discreteness, central processing, perfect precision, or a clean separation between learning and inference. Intelligence can emerge from continuous, distributed, embodied, probabilistic processes deeply coupled with their environment.
 
-This doesn't mean biological systems are "better" at computation in all respects. Digital systems can perform some tasks with greater precision and speed. But it does mean that if we want to understand the kind of intelligence that biology produces—adaptive, generalizable, efficient, robust—we may need to rethink some of our core assumptions about how computation works.
+This doesn't mean biological systems are "better" at computation in all respects. Digital systems can perform some tasks with greater precision and speed. But it does mean that if we want to understand the kind of intelligence that biology produces (adaptive, generalizable, efficient, robust), we may need to rethink some of our core assumptions about how computation works.
 
 The future of AI may lie not in simulating biology directly, but in learning from the principles that biology has discovered through millions of years of evolution. Structure and learning through iteration. Distributed and probabilistic processing. Tight coupling between perception and action. These principles point toward a different architecture for intelligence than what we have been building.`;
 
@@ -38,49 +34,18 @@ export const metadata = {
 };
 
 export default function ArticlePage() {
+  const paragraphs = articleBody.split("\n\n").map((p) => p.trim());
+
   return (
-    <PageShell>
-      <ContentContainer maxWidth="reading" className="py-16 md:py-24">
-        <Link
-          href="/blog"
-          className="inline-block mb-8 text-sm text-[#6E6763] hover:text-[#262424] transition-colors duration-200"
+    <BlogArticleLayout post={post}>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          className={index === 0 ? "blog-article-lead" : undefined}
         >
-          ← Back to Blog
-        </Link>
-
-        <article className="space-y-8">
-          <div className="space-y-5">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#262424] leading-tight">
-              {post.title}
-            </h1>
-            <p className="text-lg text-[#6E6763] italic leading-relaxed">
-              {post.description}
-            </p>
-            <BlogPostMetaLine meta={post} variant="article" />
-            <DecorativeRule className="opacity-90" />
-          </div>
-
-          <div className="space-y-6">
-            {articleBody.split("\n\n").map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-base md:text-lg leading-relaxed text-[#6E6763]"
-              >
-                {paragraph.trim()}
-              </p>
-            ))}
-          </div>
-        </article>
-
-        <div className="mt-16 pt-8 border-t border-[#DDD4CE]/30">
-          <Link
-            href="/blog"
-            className="inline-block text-sm text-[#262424] hover:opacity-60 transition-opacity duration-200"
-          >
-            ← Back to all articles
-          </Link>
-        </div>
-      </ContentContainer>
-    </PageShell>
+          {paragraph}
+        </p>
+      ))}
+    </BlogArticleLayout>
   );
 }

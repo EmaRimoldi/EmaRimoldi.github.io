@@ -9,7 +9,7 @@ export default function PhotographyPage() {
         <PageHeader
           eyebrow="Visual"
           title="Photography"
-          subtitle="A curated gallery is in progress — thank you for your patience."
+          subtitle="A curated gallery is in progress. Thank you for your patience."
         />
 
         <div className="max-w-2xl mb-12 md:mb-14 space-y-3 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">

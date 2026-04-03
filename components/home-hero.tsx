@@ -23,7 +23,7 @@ export function HomeHero() {
           className="home-soft-reveal text-sm md:text-base text-[#6E6763] max-w-xl mx-auto leading-relaxed"
           style={delay(1)}
         >
-          AI researcher exploring intelligence, learning, and useful models —
+          AI researcher exploring intelligence, learning, and useful models:
           theory, agents, and the mathematical foundations of computation.
         </p>
 
@@ -46,8 +46,10 @@ export function HomeHero() {
             className="home-soft-reveal text-[11px] md:text-xs not-italic text-[#6E6763]"
             style={delay(4)}
           >
-            — George E. P. Box,{" "}
-            <cite className="not-italic">Empirical Model-Building and Response Surfaces</cite>{" "}
+            <cite className="not-italic">George E. P. Box</cite>,{" "}
+            <cite className="not-italic">
+              Empirical Model-Building and Response Surfaces
+            </cite>{" "}
             (1987)
           </footer>
         </blockquote>

@@ -23,27 +23,29 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#262424] tracking-tight">
               {item.title}
             </h2>
-            <p className="mt-2 font-serif text-sm md:text-base italic text-[#5C5652] leading-snug">
+            <p className="mt-2 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
               {item.descriptor}
             </p>
           </div>
 
-          <p className="font-serif text-sm md:text-[0.9375rem] text-[#6E6763] leading-relaxed">
-            {item.summary}
-          </p>
+          {item.summary ? (
+            <p className="font-serif text-sm md:text-[0.9375rem] text-[#6E6763] leading-relaxed">
+              {item.summary}
+            </p>
+          ) : null}
 
           <div className="flex flex-wrap gap-2 pt-1">
-            {item.year && (
+            {item.year ? (
               <span
-                className={`rounded-full border border-[#DDD4CE] ${PAGE_BG} px-3 py-1 font-serif text-xs text-[#4A4542]`}
+                className={`rounded-md border border-[#C9BFB5]/80 ${PAGE_BG} px-2.5 py-1 font-serif text-[10px] uppercase tracking-[0.14em] text-[#5C5652]`}
               >
                 {item.year}
               </span>
-            )}
+            ) : null}
             {item.tags?.map((tag) => (
               <span
                 key={tag}
-                className={`rounded-full border border-[#DDD4CE] ${PAGE_BG} px-3 py-1 font-serif text-xs text-[#4A4542]`}
+                className={`rounded-md border border-[#DDD4CE] ${PAGE_BG} px-2.5 py-1 font-serif text-[10px] md:text-[11px] uppercase tracking-[0.1em] text-[#4A4542]`}
               >
                 {tag}
               </span>

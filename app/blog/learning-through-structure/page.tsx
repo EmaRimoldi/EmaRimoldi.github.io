@@ -1,26 +1,22 @@
-import { PageShell } from "@/components/page-shell";
-import { ContentContainer } from "@/components/content-container";
-import { DecorativeRule } from "@/components/page-header";
-import { BlogPostMetaLine } from "@/components/blog-post-meta";
+import { BlogArticleLayout } from "@/components/blog-article-layout";
 import { getBlogPost } from "@/content/blog-posts";
-import Link from "next/link";
 
 const slug = "learning-through-structure" as const;
 const post = getBlogPost(slug)!;
 
-const articleBody = `Learning is not a shapeless accumulation of facts. It is the gradual internalization of structure. When we learn, we are not passively receiving information—we are actively discovering and absorbing the patterns, hierarchies, and regularities that underlie the domains we study.
+const articleBody = `Learning is not a shapeless accumulation of facts. It is the gradual internalization of structure. When we learn, we are not passively receiving information. We are actively discovering and absorbing the patterns, hierarchies, and regularities that underlie the domains we study.
 
 Consider the difference between memorizing a list of historical dates and understanding the narrative arcs of history. The dates alone are fragments. But when embedded in stories, causality, and thematic patterns, they become nodes in a rich conceptual network. The structure transforms disconnected facts into knowledge.
 
-This principle extends to intelligence itself. A system that learns must have access to structure. Without structure, there is only noise. With structure, there is signal—the possibility of compression, prediction, and generalization.
+This principle extends to intelligence itself. A system that learns must have access to structure. Without structure, there is only noise. With structure, there is signal: the possibility of compression, prediction, and generalization.
 
 The brain discovers structure through embodied experience. We learn physics through movement, mathematics through manipulation of concrete objects before abstracting to symbols. Each modality reveals structure at its own scale. The structures discovered through different paths are often similar, which suggests something deep: structure is not invented by the observer but inherent in the domains we explore.
 
-Artificial systems, too, must be given the opportunity to discover structure. A neural network trained on unstructured noise learns nothing of value. But one given access to regularities—whether through careful data curation, inductive biases in its architecture, or appropriate training objectives—can learn with remarkable efficiency.
+Artificial systems, too, must be given the opportunity to discover structure. A neural network trained on unstructured noise learns nothing of value. But one given access to regularities, whether through careful data curation, inductive biases in its architecture, or appropriate training objectives, can learn with remarkable efficiency.
 
-The deepest learning happens when a system internalizes not just surface patterns but the underlying principles that generate them. A musician learns not just the notes of a composition, but the harmonic logic, the voice-leading, the emotional architecture that gives meaning to the notes. Similarly, an intelligence that truly understands a domain grasps the deep structure—the invariances, the principles, the generative rules.
+The deepest learning happens when a system internalizes not just surface patterns but the underlying principles that generate them. A musician learns not just the notes of a composition, but the harmonic logic, the voice-leading, the emotional architecture that gives meaning to the notes. Similarly, an intelligence that truly understands a domain grasps the deep structure: the invariances, the principles, the generative rules.
 
-This has profound implications for how we design learning systems, whether natural or artificial. The goal is not to accumulate data but to help the system discover the structures that data contains. The goal is not passive learning but active structuring—the progressive refinement of the mental models through which we interpret the world.
+This has profound implications for how we design learning systems, whether natural or artificial. The goal is not to accumulate data but to help the system discover the structures that data contains. The goal is not passive learning but active structuring, the progressive refinement of the mental models through which we interpret the world.
 
 In this view, the capacity for learning is fundamentally a capacity for finding structure. And the quality of learning is measured not by the quantity of information absorbed, but by the depth and coherence of the structural understanding achieved.`;
 
@@ -30,49 +26,18 @@ export const metadata = {
 };
 
 export default function ArticlePage() {
+  const paragraphs = articleBody.split("\n\n").map((p) => p.trim());
+
   return (
-    <PageShell>
-      <ContentContainer maxWidth="reading" className="py-16 md:py-24">
-        <Link
-          href="/blog"
-          className="inline-block mb-8 text-sm text-[#6E6763] hover:text-[#262424] transition-colors duration-200"
+    <BlogArticleLayout post={post}>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          className={index === 0 ? "blog-article-lead" : undefined}
         >
-          ← Back to Blog
-        </Link>
-
-        <article className="space-y-8">
-          <div className="space-y-5">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#262424] leading-tight">
-              {post.title}
-            </h1>
-            <p className="text-lg text-[#6E6763] italic leading-relaxed">
-              {post.description}
-            </p>
-            <BlogPostMetaLine meta={post} variant="article" />
-            <DecorativeRule className="opacity-90" />
-          </div>
-
-          <div className="space-y-6">
-            {articleBody.split("\n\n").map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-base md:text-lg leading-relaxed text-[#6E6763]"
-              >
-                {paragraph.trim()}
-              </p>
-            ))}
-          </div>
-        </article>
-
-        <div className="mt-16 pt-8 border-t border-[#DDD4CE]/30">
-          <Link
-            href="/blog"
-            className="inline-block text-sm text-[#262424] hover:opacity-60 transition-opacity duration-200"
-          >
-            ← Back to all articles
-          </Link>
-        </div>
-      </ContentContainer>
-    </PageShell>
+          {paragraph}
+        </p>
+      ))}
+    </BlogArticleLayout>
   );
 }

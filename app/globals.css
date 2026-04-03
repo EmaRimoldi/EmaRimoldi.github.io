@@ -147,6 +147,49 @@ body {
       rgba(201, 181, 160, 0.07) 8px
     );
   }
+
+  /* Blog article: editorial column */
+  .blog-nav-back::before {
+    content: "← ";
+    opacity: 0.75;
+  }
+
+  .blog-article-header {
+    @apply mb-12 md:mb-14;
+  }
+
+  .blog-article-title {
+    @apply max-w-[20ch] font-serif text-[2rem] font-semibold leading-[1.1] tracking-tight text-[#262424] text-balance md:max-w-none md:text-[2.65rem] lg:text-[2.8rem];
+  }
+
+  .blog-article-deck {
+    @apply mt-6 max-w-2xl font-serif text-lg italic leading-[1.55] text-[#5C5652] md:text-xl md:leading-[1.5];
+  }
+
+  .blog-article-meta-panel {
+    @apply mt-8 rounded-lg border border-[#DDD4CE]/70 bg-[#FAF6F1]/90 px-4 py-3.5 md:px-5 md:py-4;
+  }
+
+  .blog-article-rule {
+    @apply mt-10 w-36;
+  }
+
+  .blog-article-body {
+    @apply mt-12 space-y-6 md:mt-14 md:space-y-7;
+  }
+
+  .blog-article-body p {
+    @apply font-serif text-[1.0625rem] leading-[1.78] text-[#454039] md:text-[1.125rem] md:leading-[1.8];
+  }
+
+  .blog-article-lead {
+    @apply text-[1.125rem] leading-[1.72] text-[#3a3632] md:text-[1.2rem] md:leading-[1.75];
+  }
+
+  .blog-article-footer-nav a::before {
+    content: "← ";
+    opacity: 0.65;
+  }
 }
 
 /* Smooth transitions for interactive elements */

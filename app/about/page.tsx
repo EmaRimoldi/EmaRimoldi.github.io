@@ -37,7 +37,7 @@ export default function AboutPage() {
         <PageHeader
           className="page-header-editorial"
           eyebrow="About"
-          title="Hi there — I'm Emanuele."
+          title="Hi there, I'm Emanuele!"
         />
 
         <div className="about-bio space-y-6 md:space-y-7 text-left font-serif text-sm md:text-[0.95rem] leading-[1.72] text-[#6E6763]">
@@ -68,13 +68,13 @@ export default function AboutPage() {
             <p className="about-bio-section-label">Education</p>
             <p>
               BSc, Engineering Physics (Politecnico di Milano). MSc, Nuclear
-              Engineering — joint program at ETH Zurich, EPFL, and PSI. MSc,
+              Engineering, joint program at ETH Zurich, EPFL, and PSI. MSc,
               Neuro-X: Data Science &amp; Computational Neuroscience (EPFL).
             </p>
           </div>
 
           <p>
-            If you want to collaborate or swap ideas (coffee optional), say hi —
+            If you want to collaborate or swap ideas (coffee optional), say hi.
             I&apos;m always happy to learn from other people&apos;s notebooks 🤝
           </p>
 
