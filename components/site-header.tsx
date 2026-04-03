@@ -2,102 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  useCallback,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
 import { siteConfig, navItems } from "@/lib/constants";
 
 export function SiteHeader() {
   const pathname = usePathname();
+
   const isHomepage = pathname === "/";
 
-  /** Morph animation only when leaving `/` for another page (not between inner pages or back). */
-  const prevPathnameRef = useRef<string | null>(null);
-  const [morphLeavingHome, setMorphLeavingHome] = useState(false);
-
-  const clusterParentRef = useRef<HTMLDivElement>(null);
-  const clusterRef = useRef<HTMLDivElement>(null);
-  const [navTx, setNavTx] = useState(0);
-
-  const updateNavTransform = useCallback(() => {
-    const parent = clusterParentRef.current;
-    const nav = clusterRef.current;
-    if (!parent || !nav) return;
-
-    const pw = parent.clientWidth;
-    const nw = nav.offsetWidth;
-    if (pw <= 0 || nw <= 0) return;
-
-    if (isHomepage) {
-      setNavTx((pw - nw) / 2);
-    } else {
-      setNavTx(pw - nw);
-    }
-  }, [isHomepage]);
-
-  useLayoutEffect(() => {
-    const prev = prevPathnameRef.current;
-    const leavingHomeForInner = prev === "/" && pathname !== "/";
-    setMorphLeavingHome(leavingHomeForInner);
-    prevPathnameRef.current = pathname;
-  }, [pathname]);
-
-  useLayoutEffect(() => {
-    updateNavTransform();
-  }, [updateNavTransform, pathname]);
-
-  useLayoutEffect(() => {
-    const parent = clusterParentRef.current;
-    const nav = clusterRef.current;
-    if (!parent || typeof ResizeObserver === "undefined") return;
-
-    const ro = new ResizeObserver(() => {
-      requestAnimationFrame(updateNavTransform);
-    });
-    ro.observe(parent);
-    if (nav) ro.observe(nav);
-    window.addEventListener("resize", updateNavTransform);
-
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", updateNavTransform);
-    };
-  }, [updateNavTransform]);
-
   return (
-    <header className="site-header overflow-x-hidden border-b border-[#DDD4CE]/30">
+    <header className="site-header border-b border-[#DDD4CE]/30">
       <nav className="site-container">
-        <div className="nav-shell flex min-h-[2.75rem] items-center">
-          <div
-            className={`nav-brand-morph shrink-0 overflow-hidden ${!morphLeavingHome ? "nav-morph-skip" : ""}`}
-            style={{
-              maxWidth: isHomepage ? "0px" : "min(280px, 42vw)",
-              opacity: isHomepage ? 0 : 1,
-              paddingRight: isHomepage ? 0 : 12,
-            }}
-          >
-            <Link
-              href="/"
-              className="block font-serif text-sm font-medium tracking-tight text-[#262424] whitespace-nowrap transition-opacity duration-200 hover:opacity-60 md:text-base lg:text-lg"
-            >
-              {siteConfig.name}
-            </Link>
-          </div>
-
-          <div
-            ref={clusterParentRef}
-            className="relative min-h-[2.75rem] min-w-0 flex-1"
-          >
-            <div
-              ref={clusterRef}
-              className={`nav-cluster-track absolute top-1/2 flex w-max flex-wrap items-center gap-5 font-serif will-change-transform md:gap-8 lg:gap-10 ${!morphLeavingHome ? "nav-morph-skip" : ""}`}
-              style={{
-                transform: `translate(${navTx}px, -50%)`,
-              }}
-            >
+        {isHomepage ? (
+          <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4 md:gap-6">
+            <div />
+            <div className="flex flex-wrap justify-center gap-5 md:gap-8 lg:gap-10 font-serif">
               {navItems.map((item) => {
                 const isActive =
                   (item.href === "/" && pathname === "/") ||
@@ -107,7 +25,36 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`nav-link text-sm whitespace-nowrap md:text-base ${
+                    className={`nav-link text-sm md:text-base whitespace-nowrap ${
+                      isActive ? "nav-link-active" : ""
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+            <div aria-hidden className="min-w-0" />
+          </div>
+        ) : (
+          <div className="flex items-center justify-between gap-6 md:gap-8 lg:gap-10">
+            <Link
+              href="/"
+              className="font-serif text-sm md:text-base lg:text-lg font-medium text-[#262424] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap tracking-tight"
+            >
+              {siteConfig.name}
+            </Link>
+            <div className="flex flex-wrap justify-end gap-5 md:gap-8 lg:gap-10 font-serif">
+              {navItems.map((item) => {
+                const isActive =
+                  (item.href === "/" && pathname === "/") ||
+                  (item.href !== "/" && pathname.startsWith(item.href));
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`nav-link text-sm md:text-base whitespace-nowrap ${
                       isActive ? "nav-link-active" : ""
                     }`}
                   >
@@ -117,7 +64,7 @@ export function SiteHeader() {
               })}
             </div>
           </div>
-        </div>
+        )}
       </nav>
     </header>
   );
