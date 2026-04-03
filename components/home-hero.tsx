@@ -1,6 +1,7 @@
 "use client";
 
 import { HeroCornerFrame } from "@/components/decorative-elements";
+import { DecorativeRule } from "@/components/page-header";
 import { SocialLinks } from "@/components/social-links";
 
 /** Delay between each text block (seconds). */
@@ -29,9 +30,17 @@ export function HomeHero() {
           theory, agents, and the mathematical foundations of computation.
         </p>
 
+        <div
+          className="home-soft-reveal flex justify-center py-2 md:py-3"
+          style={delay(2)}
+          aria-hidden
+        >
+          <DecorativeRule className="opacity-85" />
+        </div>
+
         <blockquote
           className="home-soft-reveal mx-auto max-w-2xl space-y-3 px-5 py-2 md:px-8 md:py-4"
-          style={delay(2)}
+          style={delay(3)}
         >
           <p className="italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]">
             All models are wrong, but some are useful.
@@ -48,7 +57,7 @@ export function HomeHero() {
 
       <div
         className="home-soft-reveal relative z-10 mt-16 md:mt-20 mb-16 md:mb-20"
-        style={delay(3)}
+        style={delay(4)}
       >
         <SocialLinks />
       </div>
