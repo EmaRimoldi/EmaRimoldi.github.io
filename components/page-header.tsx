@@ -41,7 +41,8 @@ export function DecorativeRule({ className = "" }: { className?: string }) {
 
 type PageHeaderProps = {
   eyebrow?: string;
-  title: ReactNode;
+  /** Large heading; omit to keep editorial frame (eyebrow, rule, subtitle) without a display title */
+  title?: ReactNode;
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
@@ -55,6 +56,7 @@ export function PageHeader({
   className = "",
 }: PageHeaderProps) {
   const center = align === "center";
+  const showTitle = title != null && title !== "";
 
   return (
     <header
@@ -62,7 +64,9 @@ export function PageHeader({
     >
       {eyebrow ? <p className="page-header-eyebrow">{eyebrow}</p> : null}
       <DecorativeRule className={center ? "mx-auto" : ""} />
-      <h1 className="page-header-title">{title}</h1>
+      {showTitle ? (
+        <h1 className="page-header-title">{title}</h1>
+      ) : null}
       {subtitle ? (
         <p
           className={`page-header-subtitle ${center ? "mx-auto max-w-xl" : "max-w-2xl"}`}
