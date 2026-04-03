@@ -13,7 +13,7 @@ export function HomeHero() {
     <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center pt-6 md:pt-12">
       <div className="space-y-8 md:space-y-12">
         <h1
-          className="home-soft-reveal text-xl md:text-3xl lg:text-4xl font-normal tracking-tight text-[#262424] leading-[1.12]"
+          className="home-soft-reveal text-xl md:text-3xl lg:text-4xl font-medium tracking-[-0.02em] text-[#262424] leading-[1.1]"
           style={delay(0)}
         >
           Emanuele Rimoldi

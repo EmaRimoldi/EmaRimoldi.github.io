@@ -10,6 +10,15 @@ body {
   background-color: #f5eee9;
   color: #262424;
   font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(74, 92, 86, 0.2);
+  color: inherit;
 }
 
 /* Soft paper lighting — restrained, print-like */

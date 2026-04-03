@@ -21,15 +21,7 @@ export const projectsItems: ResearchItem[] = [
     descriptor:
       "Semi-automated assistant from a research question to experiments, analysis, and a manuscript, with literature synthesis and human checkpoints.",
     year: 2026,
-    tags: [
-      "Claude Code",
-      "Research automation",
-      "Literature",
-      "Obsidian",
-      "Zotero",
-      "SLURM",
-      "Plugin bundle",
-    ],
+    tags: ["Research automation", "Claude Code", "Literature"],
     links: {
       code: "https://github.com/EmaRimoldi/Claude-scholar-extended",
       notes:
@@ -42,14 +34,7 @@ export const projectsItems: ResearchItem[] = [
     descriptor:
       "Parallel Claude Code subagents with isolated git worktrees and SLURM workers for NanoGPT hyperparameter search.",
     year: 2026,
-    tags: [
-      "Claude Code",
-      "SLURM",
-      "NanoGPT",
-      "HPC",
-      "Git worktrees",
-      "Hyperparameter search",
-    ],
+    tags: ["Claude Code", "SLURM", "NanoGPT"],
     links: {
       code: "https://github.com/EmaRimoldi/agent_parallelization",
       notes: "https://github.com/EmaRimoldi/agent_parallelization/tree/master/docs",
@@ -61,7 +46,7 @@ export const projectsItems: ResearchItem[] = [
     descriptor:
       "Compact decoder-only models with LoRA for hate speech detection and LIME explanations.",
     year: 2024,
-    tags: ["PyTorch", "LoRA", "LIME", "NLP", "Interpretability"],
+    tags: ["PyTorch", "NLP", "Interpretability"],
     links: {
       code: "https://github.com/EmaRimoldi/HateLens",
     },

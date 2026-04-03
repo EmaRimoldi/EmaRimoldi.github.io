@@ -8,7 +8,7 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
 
   return (
     <article
-      className={`group relative rounded-2xl border border-[#DDD4CE] ${PAGE_BG} p-6 md:p-8 transition-colors duration-300 ease-out hover:border-[#C9BFB5]`}
+      className={`group relative rounded-2xl border border-[#DDD4CE] ${PAGE_BG} p-6 md:p-8 shadow-[0_1px_2px_rgba(38,36,36,0.04)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#C9BFB5] hover:shadow-[0_4px_24px_rgba(38,36,36,0.06)]`}
     >
       <div className="flex items-start gap-3 md:gap-4">
         <span
@@ -20,7 +20,7 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
 
         <div className="min-w-0 flex-1 space-y-4">
           <div>
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#262424] tracking-tight">
+            <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#262424] tracking-[-0.02em]">
               {item.title}
             </h2>
             <p className="mt-2 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
@@ -45,7 +45,7 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
             {item.tags?.map((tag) => (
               <span
                 key={tag}
-                className={`rounded-md border border-[#DDD4CE] ${PAGE_BG} px-2.5 py-1 font-serif text-[10px] md:text-[11px] uppercase tracking-[0.1em] text-[#4A4542]`}
+                className={`rounded-md border border-[#D8D0C6]/90 ${PAGE_BG} px-2.5 py-1 font-serif text-[10px] md:text-[11px] uppercase tracking-[0.08em] text-[#5C5652]`}
               >
                 {tag}
               </span>
