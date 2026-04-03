@@ -63,23 +63,12 @@ export function FooterOrnament() {
   );
 }
 
-/** Light triple mark under page intros (when no heavy editorial border) */
-export function PageIntroFlourish({ centered }: { centered?: boolean }) {
+/** Hairline under page intro subtitle — same tone as `page-header-editorial` bottom rule */
+export function PageIntroFlourish() {
   return (
     <div
-      className={`mt-6 flex items-center gap-2.5 md:mt-7 ${centered ? "justify-center" : ""}`}
+      className="mt-6 h-px w-full bg-[#DDD4CE]/80 md:mt-7"
       aria-hidden
-    >
-      <span
-        className="h-px w-6 bg-[#C9B5A0]/45 md:w-8"
-        style={{ maxWidth: "32px" }}
-      />
-      <span className="flex gap-1">
-        <span className="h-1 w-1 rounded-full bg-[#C9B5A0]/55" />
-        <span className="h-1 w-1 rounded-full bg-[#C9B5A0]/40" />
-        <span className="h-1 w-1 rounded-full bg-[#C9B5A0]/55" />
-      </span>
-      <span className="h-px w-6 bg-[#C9B5A0]/45 md:w-8" />
-    </div>
+    />
   );
 }

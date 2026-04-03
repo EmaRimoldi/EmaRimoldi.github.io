@@ -47,7 +47,7 @@ type PageHeaderProps = {
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
-  /** Subtle ornament under subtitle (off when editorial bottom rule is enough) */
+  /** Hairline under subtitle (off when `page-header-editorial` supplies the bottom rule) */
   showIntroFlourish?: boolean;
 };
 
@@ -81,7 +81,7 @@ export function PageHeader({
           {subtitle}
         </p>
       ) : null}
-      {showFlourish ? <PageIntroFlourish centered={center} /> : null}
+      {showFlourish ? <PageIntroFlourish /> : null}
     </header>
   );
 }

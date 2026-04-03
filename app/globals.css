@@ -143,38 +143,6 @@ body {
     pointer-events: none;
   }
 
-  /* Landing quote: hairline verticals (desktop only) */
-  .home-quote-frame::before,
-  .home-quote-frame::after {
-    content: "";
-    position: absolute;
-    top: 0.2rem;
-    bottom: 0.2rem;
-    width: 1px;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(201, 181, 160, 0.42),
-      transparent
-    );
-    pointer-events: none;
-  }
-
-  .home-quote-frame::before {
-    left: 0;
-  }
-
-  .home-quote-frame::after {
-    right: 0;
-  }
-
-  @media (max-width: 767px) {
-    .home-quote-frame::before,
-    .home-quote-frame::after {
-      display: none;
-    }
-  }
-
   .about-bio-greeting {
     @apply font-serif text-lg md:text-xl text-[#262424] leading-snug tracking-tight;
   }
