@@ -1,17 +1,21 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
+import { PageHeader } from "@/components/page-header";
 
 export default function PhotographyPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
-        <div className="max-w-2xl mb-12 md:mb-14 space-y-4">
-          <p className="font-serif text-base md:text-lg text-[#262424] leading-relaxed">
-            This section is under development. A curated gallery will be added in a
-            future version of the site.
-          </p>
-          <p className="font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
-            Thank you for your patience — check back soon.
+        <PageHeader
+          eyebrow="Visual"
+          title="Photography"
+          subtitle="A curated gallery is in progress — thank you for your patience."
+        />
+
+        <div className="max-w-2xl mb-12 md:mb-14 space-y-3 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
+          <p className="text-[#262424]">
+            This section will host selected prints and series. For now, placeholders
+            below mark the grid layout.
           </p>
         </div>
 
@@ -19,12 +23,12 @@ export default function PhotographyPage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="aspect-[3/2] rounded-lg border border-dashed border-[#CCC4BC] bg-[#EDE8E2]/50 flex flex-col items-center justify-center gap-2 text-[#9A928A] font-serif text-sm md:text-base px-4 text-center"
+              className="photo-placeholder-tile aspect-[3/2] rounded-xl border border-[#DDD4CE]/80 flex flex-col items-center justify-center gap-2 text-[#9A928A] font-serif text-sm md:text-base px-4 text-center"
             >
-              <span className="text-xs tracking-[0.14em] uppercase text-[#B5ADA5]">
+              <span className="text-[0.65rem] tracking-[0.18em] uppercase text-[#B5ADA5]">
                 Placeholder
               </span>
-              <span>Image {i}</span>
+              <span className="text-[#6E6763]">Image {i}</span>
             </div>
           ))}
         </div>

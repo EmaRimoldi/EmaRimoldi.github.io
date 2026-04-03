@@ -1,5 +1,6 @@
 "use client";
 
+import { DecorativeRule } from "@/components/page-header";
 import { SocialLinks } from "@/components/social-links";
 
 /** Delay between each text block (seconds). */
@@ -26,16 +27,24 @@ export function HomeHero() {
           foundations of theory and computation.
         </p>
 
-        <blockquote className="max-w-2xl mx-auto py-6 md:py-8 space-y-3">
+        <div
+          className="home-soft-reveal flex justify-center py-2 md:py-3"
+          style={delay(2)}
+          aria-hidden
+        >
+          <DecorativeRule className="opacity-85" />
+        </div>
+
+        <blockquote className="max-w-2xl mx-auto py-4 md:py-6 space-y-3">
           <p
             className="home-soft-reveal italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]"
-            style={delay(2)}
+            style={delay(3)}
           >
             The purpose of computing is insight, not numbers.
           </p>
           <footer
             className="home-soft-reveal text-[11px] md:text-xs not-italic text-[#6E6763]"
-            style={delay(3)}
+            style={delay(4)}
           >
             — Richard W. Hamming,{" "}
             <cite className="not-italic">
@@ -48,7 +57,7 @@ export function HomeHero() {
 
       <div
         className="home-soft-reveal mt-16 md:mt-20 mb-16 md:mb-20"
-        style={delay(4)}
+        style={delay(5)}
       >
         <SocialLinks />
       </div>

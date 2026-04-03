@@ -1,5 +1,6 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
+import { DecorativeRule } from "@/components/page-header";
 import Link from "next/link";
 
 const article = {
@@ -50,13 +51,14 @@ export default function ArticlePage() {
 
         {/* Article header */}
         <article className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#262424] leading-tight">
               {article.title}
             </h1>
             <p className="text-lg text-[#6E6763] italic leading-relaxed">
               {article.description}
             </p>
+            <DecorativeRule className="opacity-90" />
           </div>
 
           {/* Article body */}
