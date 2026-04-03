@@ -74,6 +74,26 @@ body {
     @apply text-base transition-opacity duration-200 hover:opacity-60;
   }
 
+  /* Header: morph brand + sliding nav cluster (see site-header.tsx) */
+  .nav-brand-morph {
+    transition-property: max-width, opacity, padding-right;
+    transition-duration: 750ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-cluster-track {
+    transition-property: transform;
+    transition-duration: 750ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-brand-morph,
+    .nav-cluster-track {
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   .nav-link-active {
     @apply underline decoration-2 underline-offset-4;
   }
