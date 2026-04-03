@@ -131,6 +131,11 @@ body {
     @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
   }
 
+  /* Scholar / external refs — distinct from body and from contact row */
+  .about-supervisor-link {
+    @apply text-[#455C5A] border-b border-dotted border-[#A8B8B4] pb-px transition-colors duration-200 hover:text-[#2F3F3D] hover:border-[#5E7A76];
+  }
+
   /* Photography placeholders: faint ruled texture */
   .photo-placeholder-tile {
     background-color: rgba(237, 232, 226, 0.5);

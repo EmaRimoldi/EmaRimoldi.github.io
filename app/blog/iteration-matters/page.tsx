@@ -1,13 +1,14 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { DecorativeRule } from "@/components/page-header";
+import { BlogPostMetaLine } from "@/components/blog-post-meta";
+import { getBlogPost } from "@/content/blog-posts";
 import Link from "next/link";
 
-const article = {
-  title: "Why Iteration Matters in Intelligence",
-  description:
-    "Exploring the role of iterative refinement in developing robust and adaptive intelligence.",
-  content: `Intelligence is not a state but a process. More precisely, intelligence is the capacity to refine, correct, and improve through repeated cycles of thought and action.
+const slug = "iteration-matters" as const;
+const post = getBlogPost(slug)!;
+
+const articleBody = `Intelligence is not a state but a process. More precisely, intelligence is the capacity to refine, correct, and improve through repeated cycles of thought and action.
 
 This is not a metaphor. At every level of nature, from the evolution of species to the development of individual minds, intelligence emerges through iteration. A system that can only act once, that cannot revisit and revise its own outputs, cannot truly be intelligent. Intelligence requires the ability to notice mistakes, to update beliefs, to try again.
 
@@ -31,19 +32,17 @@ Even in mathematics and logic, where we might expect exact solutions on the firs
 
 The implication is clear: if we want to build systems that are truly intelligent, we must build them to be iterative. Not just in training, but in deployment. Systems that can reflect on their own reasoning, that can generate alternatives, that can refine their outputs through successive passes—these are the systems that will prove most robust and adaptive to changing conditions.
 
-Intelligence, at its deepest, is not about producing perfect outputs on the first attempt. It is about the capacity to keep trying, keep learning, keep improving. It is iteration all the way down.`,
-};
+Intelligence, at its deepest, is not about producing perfect outputs on the first attempt. It is about the capacity to keep trying, keep learning, keep improving. It is iteration all the way down.`;
 
 export const metadata = {
-  title: article.title,
-  description: article.description,
+  title: post.title,
+  description: post.description,
 };
 
 export default function ArticlePage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="reading" className="py-16 md:py-24">
-        {/* Back link */}
         <Link
           href="/blog"
           className="inline-block mb-8 text-sm text-[#6E6763] hover:text-[#262424] transition-colors duration-200"
@@ -51,21 +50,20 @@ export default function ArticlePage() {
           ← Back to Blog
         </Link>
 
-        {/* Article header */}
         <article className="space-y-8">
           <div className="space-y-5">
             <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#262424] leading-tight">
-              {article.title}
+              {post.title}
             </h1>
             <p className="text-lg text-[#6E6763] italic leading-relaxed">
-              {article.description}
+              {post.description}
             </p>
+            <BlogPostMetaLine meta={post} variant="article" />
             <DecorativeRule className="opacity-90" />
           </div>
 
-          {/* Article body */}
           <div className="space-y-6">
-            {article.content.split("\n\n").map((paragraph, index) => (
+            {articleBody.split("\n\n").map((paragraph, index) => (
               <p
                 key={index}
                 className="text-base md:text-lg leading-relaxed text-[#6E6763]"
@@ -76,7 +74,6 @@ export default function ArticlePage() {
           </div>
         </article>
 
-        {/* Footer navigation */}
         <div className="mt-16 pt-8 border-t border-[#DDD4CE]/30">
           <Link
             href="/blog"

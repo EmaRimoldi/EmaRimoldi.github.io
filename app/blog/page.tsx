@@ -47,42 +47,77 @@ export default function BlogPage() {
           </button>
         </div>
 
-        {activeTab === "posts" && (
-          <section className="max-w-3xl mx-auto border-t border-[#DDD4CE]/70 pt-8 md:pt-10">
-            {blogPosts.map((post, i) => (
-              <BlogCard
-                key={post.slug}
-                index={i}
-                title={post.title}
-                description={post.description}
-                href={post.href}
-              />
-            ))}
-          </section>
-        )}
+        <div className="mx-auto w-full max-w-3xl">
+          {activeTab === "posts" && (
+            <section className="w-full border-t border-[#DDD4CE]/70 pt-8 md:pt-10">
+              {blogPosts.map((post, i) => (
+                <BlogCard key={post.slug} post={post} index={i} />
+              ))}
+            </section>
+          )}
 
-        {/* Personal Recommendations Tab Content */}
-        {activeTab === "recommendations" && (
-          <section className="max-w-2xl mx-auto border-t border-[#DDD4CE]/70 pt-10 md:pt-12">
-            <ul className="space-y-5 list-disc list-inside text-sm md:text-base leading-relaxed font-serif text-[#262424] text-left pl-1">
-              <li className="text-[#262424]">
-                <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">Gödel, Escher, Bach</a>: A spiraling exploration of patterns, self-reference, and consciousness; how meaning emerges from the interplay of formal systems.
+          {activeTab === "recommendations" && (
+            <section className="w-full border-t border-[#DDD4CE]/70 pt-8 md:pt-10">
+              <ul className="space-y-5 text-sm md:text-base leading-relaxed font-serif text-[#6E6763] text-left list-none pl-0">
+              <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
+                <a
+                  href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#455C5A] border-b border-dotted border-[#A8B8B4] hover:text-[#2F3F3D] transition-colors"
+                >
+                  Gödel, Escher, Bach
+                </a>
+                : A spiraling exploration of patterns, self-reference, and consciousness; how meaning emerges from the interplay of formal systems.
               </li>
-              <li className="text-[#262424]">
-                <a href="https://www.semanticscholar.org/paper/The-Architecture-of-Complexity-Simon/03511041271257b85e6d9058e51f02cf5f4e3937" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">The Architecture of Complexity</a>: Herbert Simon on why the universe builds hierarchies; what this reveals about intelligence, constraint, and emergent order.
+              <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
+                <a
+                  href="https://www.semanticscholar.org/paper/The-Architecture-of-Complexity-Simon/03511041271257b85e6d9058e51f02cf5f4e3937"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#455C5A] border-b border-dotted border-[#A8B8B4] hover:text-[#2F3F3D] transition-colors"
+                >
+                  The Architecture of Complexity
+                </a>
+                : Herbert Simon on why the universe builds hierarchies; what this reveals about intelligence, constraint, and emergent order.
               </li>
-              <li className="text-[#262424]">
-                <a href="https://www.penguinrandomhouse.com/books/324430/ways-of-seeing-by-john-berger/" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">Ways of Seeing</a>: John Berger on perception and visual culture; how embodied experience shapes understanding.
+              <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
+                <a
+                  href="https://www.penguinrandomhouse.com/books/324430/ways-of-seeing-by-john-berger/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#455C5A] border-b border-dotted border-[#A8B8B4] hover:text-[#2F3F3D] transition-colors"
+                >
+                  Ways of Seeing
+                </a>
+                : John Berger on perception and visual culture; how embodied experience shapes understanding.
               </li>
-              <li className="text-[#262424]">
-                <a href="https://en.wikipedia.org/wiki/A_Mathematician%27s_Apology" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">A Mathematician's Apology</a>: G.H. Hardy on the beauty and necessity of rigorous thought; why elegance and truth are inseparable.
+              <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
+                <a
+                  href="https://en.wikipedia.org/wiki/A_Mathematician%27s_Apology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#455C5A] border-b border-dotted border-[#A8B8B4] hover:text-[#2F3F3D] transition-colors"
+                >
+                  A Mathematician&apos;s Apology
+                </a>
+                : G.H. Hardy on the beauty and necessity of rigorous thought; why elegance and truth are inseparable.
               </li>
-              <li className="text-[#262424]">
-                <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions" target="_blank" rel="noopener noreferrer" className="font-semibold hover:opacity-60 transition-opacity duration-200">The Structure of Scientific Revolutions</a>: Thomas Kuhn on paradigms and how frameworks shape what we can perceive and understand.
+              <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
+                <a
+                  href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#455C5A] border-b border-dotted border-[#A8B8B4] hover:text-[#2F3F3D] transition-colors"
+                >
+                  The Structure of Scientific Revolutions
+                </a>
+                : Thomas Kuhn on paradigms and how frameworks shape what we can perceive and understand.
               </li>
             </ul>
-          </section>
-        )}
+            </section>
+          )}
+        </div>
       </ContentContainer>
     </PageShell>
   );

@@ -23,8 +23,8 @@ export function HomeHero() {
           className="home-soft-reveal text-sm md:text-base text-[#6E6763] max-w-xl mx-auto leading-relaxed"
           style={delay(1)}
         >
-          AI researcher exploring intelligence, learning, and the mathematical
-          foundations of theory and computation.
+          AI researcher exploring intelligence, learning, and useful models —
+          theory, agents, and the mathematical foundations of computation.
         </p>
 
         <div
@@ -40,17 +40,15 @@ export function HomeHero() {
             className="home-soft-reveal italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]"
             style={delay(3)}
           >
-            The purpose of computing is insight, not numbers.
+            All models are wrong, but some are useful.
           </p>
           <footer
             className="home-soft-reveal text-[11px] md:text-xs not-italic text-[#6E6763]"
             style={delay(4)}
           >
-            — Richard W. Hamming,{" "}
-            <cite className="not-italic">
-              Numerical Methods for Scientists and Engineers
-            </cite>{" "}
-            (1962)
+            — George E. P. Box,{" "}
+            <cite className="not-italic">Empirical Model-Building and Response Surfaces</cite>{" "}
+            (1987)
           </footer>
         </blockquote>
       </div>

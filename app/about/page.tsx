@@ -23,7 +23,7 @@ function SupervisorLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="about-contact-link"
+      className="about-supervisor-link"
     >
       {children}
     </a>
@@ -41,7 +41,7 @@ export default function AboutPage() {
         />
 
         <div className="about-bio space-y-6 md:space-y-7 text-left font-serif text-sm md:text-[0.95rem] leading-[1.72] text-[#6E6763]">
-          <p className="text-[#262424]">
+          <p>
             I&apos;m a Visiting Researcher at MIT, where I&apos;m advised by{" "}
             <SupervisorLink href={SCHOLAR.beneventano}>
               Pierfrancesco Beneventano
@@ -57,7 +57,9 @@ export default function AboutPage() {
             models with{" "}
             <SupervisorLink href={SCHOLAR.dan}>Jonathan Dan</SupervisorLink>.
             At Idiap Research Institute,{" "}
-            <SupervisorLink href={SCHOLAR.garner}>Phil Garner</SupervisorLink>{" "}
+            <SupervisorLink href={SCHOLAR.garner}>
+              Philip N. Garner
+            </SupervisorLink>{" "}
             supervised my research on bio-inspired text-to-speech and spiking
             neural networks.
           </p>
