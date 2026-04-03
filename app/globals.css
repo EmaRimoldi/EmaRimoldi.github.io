@@ -77,6 +77,23 @@ body {
   .body-text {
     @apply text-[10px] md:text-xs text-[#6E6763] leading-relaxed;
   }
+
+  /* About: subtle editorial frame — one accent, no heavy boxes */
+  .about-bio {
+    @apply relative pl-5 md:pl-7 border-l-[3px] border-[#C9B5A0]/70;
+  }
+
+  .about-bio-greeting {
+    @apply font-serif text-lg md:text-xl text-[#262424] leading-snug tracking-tight;
+  }
+
+  .about-bio-section-label {
+    @apply font-serif text-[0.65rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
+  }
+
+  .about-contact-link {
+    @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
+  }
 }
 
 /* Smooth transitions for interactive elements */
