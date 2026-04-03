@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FooterOrnament } from "@/components/decorative-elements";
 import { contactConfig, socialLinksConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -6,6 +7,9 @@ export function Footer() {
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#DDD4CE]/90 bg-[#F5EEE9]/92 backdrop-blur-md backdrop-saturate-100 supports-[backdrop-filter]:bg-[#F5EEE9]/85">
+      <div className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2">
+        <FooterOrnament />
+      </div>
       <div className="site-container py-3.5 md:py-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
           {/* Left: Copyright */}

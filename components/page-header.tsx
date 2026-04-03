@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { PageIntroFlourish } from "@/components/decorative-elements";
 
 /** Minimal chapter-style divider — bronze ink on paper */
 export function DecorativeRule({ className = "" }: { className?: string }) {
@@ -46,6 +47,8 @@ type PageHeaderProps = {
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
+  /** Subtle ornament under subtitle (off when editorial bottom rule is enough) */
+  showIntroFlourish?: boolean;
 };
 
 export function PageHeader({
@@ -54,9 +57,13 @@ export function PageHeader({
   subtitle,
   align = "left",
   className = "",
+  showIntroFlourish = true,
 }: PageHeaderProps) {
   const center = align === "center";
   const showTitle = title != null && title !== "";
+  const editorial = className.includes("page-header-editorial");
+  const showFlourish =
+    showIntroFlourish && subtitle != null && !editorial;
 
   return (
     <header
@@ -74,6 +81,7 @@ export function PageHeader({
           {subtitle}
         </p>
       ) : null}
+      {showFlourish ? <PageIntroFlourish centered={center} /> : null}
     </header>
   );
 }

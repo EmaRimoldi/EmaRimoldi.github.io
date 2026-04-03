@@ -8,7 +8,7 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
 
   return (
     <article
-      className={`group relative rounded-2xl border border-[#DDD4CE] ${PAGE_BG} p-6 md:p-8 shadow-[0_1px_2px_rgba(38,36,36,0.04)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#C9BFB5] hover:shadow-[0_4px_24px_rgba(38,36,36,0.06)]`}
+      className={`project-card-surface group relative overflow-hidden rounded-2xl border border-[#DDD4CE] ${PAGE_BG} p-6 md:p-8 shadow-[0_1px_2px_rgba(38,36,36,0.04)] transition-[border-color,box-shadow] duration-500 ease-out before:pointer-events-none before:absolute before:inset-x-8 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[#C9B5A0]/35 before:to-transparent hover:border-[#C9BFB5] hover:shadow-[0_4px_24px_rgba(38,36,36,0.06)]`}
     >
       <div className="flex items-start gap-3 md:gap-4">
         <span

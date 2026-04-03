@@ -1,5 +1,6 @@
 "use client";
 
+import { HeroCornerFrame } from "@/components/decorative-elements";
 import { DecorativeRule } from "@/components/page-header";
 import { SocialLinks } from "@/components/social-links";
 
@@ -10,8 +11,10 @@ export function HomeHero() {
   const delay = (step: number) => ({ animationDelay: `${step * STEP_S}s` });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center pt-6 md:pt-12">
-      <div className="space-y-8 md:space-y-12">
+    <main className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center pt-6 md:pt-12">
+      <HeroCornerFrame />
+
+      <div className="relative z-10 space-y-8 md:space-y-12">
         <h1
           className="home-soft-reveal text-xl md:text-3xl lg:text-4xl font-medium tracking-[-0.02em] text-[#262424] leading-[1.1]"
           style={delay(0)}
@@ -35,7 +38,7 @@ export function HomeHero() {
           <DecorativeRule className="opacity-85" />
         </div>
 
-        <blockquote className="max-w-2xl mx-auto py-4 md:py-6 space-y-3">
+        <blockquote className="home-quote-frame relative max-w-2xl mx-auto space-y-3 px-5 py-4 md:px-12 md:py-6">
           <p
             className="home-soft-reveal italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]"
             style={delay(3)}
@@ -56,7 +59,7 @@ export function HomeHero() {
       </div>
 
       <div
-        className="home-soft-reveal mt-16 md:mt-20 mb-16 md:mb-20"
+        className="home-soft-reveal relative z-10 mt-16 md:mt-20 mb-16 md:mb-20"
         style={delay(5)}
       >
         <SocialLinks />

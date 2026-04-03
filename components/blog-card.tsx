@@ -13,7 +13,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
   return (
     <Link
       href={post.href}
-      className="group block border-b border-[#DDD4CE]/70 py-9 md:py-11 first:pt-0 transition-[background-color] duration-300 ease-out hover:bg-[#F3EDE6]/60 -mx-1 px-4 sm:px-5 rounded-sm"
+      className="group relative block border-b border-[#DDD4CE]/70 py-9 md:py-11 first:pt-0 transition-[background-color] duration-300 ease-out before:pointer-events-none before:absolute before:left-0 before:top-12 before:bottom-12 before:w-px before:bg-gradient-to-b before:from-transparent before:via-[#C9B5A0]/45 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 hover:bg-[#F3EDE6]/60 hover:before:opacity-100 -mx-1 px-4 sm:px-5 rounded-sm"
     >
       <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-10 md:gap-14">
         <span
