@@ -14,6 +14,10 @@ export function SiteHeader() {
   const pathname = usePathname();
   const isHomepage = pathname === "/";
 
+  /** Morph animation only when leaving `/` for another page (not between inner pages or back). */
+  const prevPathnameRef = useRef<string | null>(null);
+  const [morphLeavingHome, setMorphLeavingHome] = useState(false);
+
   const clusterParentRef = useRef<HTMLDivElement>(null);
   const clusterRef = useRef<HTMLDivElement>(null);
   const [navTx, setNavTx] = useState(0);
@@ -33,6 +37,13 @@ export function SiteHeader() {
       setNavTx(pw - nw);
     }
   }, [isHomepage]);
+
+  useLayoutEffect(() => {
+    const prev = prevPathnameRef.current;
+    const leavingHomeForInner = prev === "/" && pathname !== "/";
+    setMorphLeavingHome(leavingHomeForInner);
+    prevPathnameRef.current = pathname;
+  }, [pathname]);
 
   useLayoutEffect(() => {
     updateNavTransform();
@@ -61,7 +72,7 @@ export function SiteHeader() {
       <nav className="site-container">
         <div className="nav-shell flex min-h-[2.75rem] items-center">
           <div
-            className="nav-brand-morph shrink-0 overflow-hidden"
+            className={`nav-brand-morph shrink-0 overflow-hidden ${!morphLeavingHome ? "nav-morph-skip" : ""}`}
             style={{
               maxWidth: isHomepage ? "0px" : "min(280px, 42vw)",
               opacity: isHomepage ? 0 : 1,
@@ -82,7 +93,7 @@ export function SiteHeader() {
           >
             <div
               ref={clusterRef}
-              className="nav-cluster-track absolute top-1/2 flex w-max flex-wrap items-center gap-5 font-serif will-change-transform md:gap-8 lg:gap-10"
+              className={`nav-cluster-track absolute top-1/2 flex w-max flex-wrap items-center gap-5 font-serif will-change-transform md:gap-8 lg:gap-10 ${!morphLeavingHome ? "nav-morph-skip" : ""}`}
               style={{
                 transform: `translate(${navTx}px, -50%)`,
               }}

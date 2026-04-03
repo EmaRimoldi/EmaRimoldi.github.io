@@ -87,6 +87,12 @@ body {
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
+  /* Instant layout when not landing → inner (see site-header.tsx) */
+  .nav-brand-morph.nav-morph-skip,
+  .nav-cluster-track.nav-morph-skip {
+    transition: none !important;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .nav-brand-morph,
     .nav-cluster-track {
