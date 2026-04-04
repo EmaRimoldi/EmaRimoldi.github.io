@@ -1,6 +1,7 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { PageHeader } from "@/components/page-header";
+import { AboutMitWhereabouts } from "@/components/about-mit-whereabouts";
 import { AboutPortrait } from "@/components/about-portrait";
 import { contactConfig } from "@/lib/site-config";
 
@@ -59,16 +60,19 @@ export default function AboutPage() {
             />
 
             <div className="about-bio space-y-6 md:space-y-7 text-left font-serif text-sm md:text-[0.95rem] leading-[1.72] text-[#6E6763]">
-              <p>
-                I&apos;m a Visiting Researcher at MIT, where I&apos;m advised by{" "}
-                <SupervisorLink href={SCHOLAR.beneventano}>
-                  Pierfrancesco Beneventano
-                </SupervisorLink>{" "}
-                and{" "}
-                <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
-                . I work on agentic systems, fundamental limits of AI, and
-                theorems about training neural networks.
-              </p>
+              <div className="space-y-3 md:space-y-3.5">
+                <AboutMitWhereabouts />
+                <p>
+                  I&apos;m a Visiting Researcher at MIT, where I&apos;m advised by{" "}
+                  <SupervisorLink href={SCHOLAR.beneventano}>
+                    Pierfrancesco Beneventano
+                  </SupervisorLink>{" "}
+                  and{" "}
+                  <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
+                  . I work on agentic systems, fundamental limits of AI, and
+                  theorems about training neural networks.
+                </p>
+              </div>
 
               <p>
                 Before that, at Logitech&apos;s CTO office I worked on foundation
@@ -81,11 +85,6 @@ export default function AboutPage() {
                 supervised my research on bio-inspired text-to-speech and spiking
                 neural networks.
               </p>
-
-              <div>
-                <p className="about-bio-section-label">Location</p>
-                <p>Cambridge, MA — 42.3601° N, 71.0942° W</p>
-              </div>
 
               <div>
                 <p className="about-bio-section-label">Education</p>

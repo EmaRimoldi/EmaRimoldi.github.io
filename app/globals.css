@@ -151,6 +151,23 @@ body {
     @apply font-serif text-[0.65rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
+  /* Titoletto above first bio paragraph: MIT place + local time */
+  .about-bio-titoletto {
+    @apply mb-1;
+  }
+
+  .about-bio-titoletto-coords {
+    @apply font-serif text-[0.7rem] md:text-[0.75rem] tracking-[0.12em] text-[#9A928A] leading-snug;
+  }
+
+  .about-bio-titoletto-time {
+    @apply font-serif text-[0.7rem] md:text-[0.75rem] leading-snug tracking-wide text-[#6E6763];
+  }
+
+  .about-bio-titoletto-tz {
+    @apply font-normal tracking-normal text-[#9A928A];
+  }
+
   .about-contact-link {
     @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
   }
