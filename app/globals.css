@@ -151,29 +151,8 @@ body {
     @apply font-serif text-[0.65rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
-  /* About: dominant lead + secondary quote (two-column layout) */
-  .about-lead {
-    @apply text-lg md:text-xl lg:text-[1.35rem] leading-snug font-normal tracking-[-0.015em];
-  }
-
-  .about-brand-emphasis {
-    color: #455c5a;
-  }
-
-  .about-quote {
-    @apply text-[0.8125rem] md:text-sm italic leading-relaxed text-[#8A8278];
-  }
-
-  .about-quote footer {
-    @apply text-[0.7rem] md:text-[0.75rem] text-[#9A928A] not-italic;
-  }
-
-  .about-body-text {
-    @apply text-sm md:text-[0.95rem] leading-relaxed;
-  }
-
   .about-contact-link {
-    @apply text-[#262424] border-b border-dotted border-[#455C5A]/35 pb-px transition-colors duration-200 hover:border-[#455C5A] hover:text-[#2F3F3D];
+    @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
   }
 
   /* Scholar / external refs — distinct from body and from contact row */
