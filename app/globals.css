@@ -153,10 +153,6 @@ body {
     @apply mb-1.5 font-serif text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#9A928A];
   }
 
-  .about-letter-name {
-    @apply font-serif text-[0.95rem] font-semibold tracking-[-0.01em] text-[#262424] md:text-[1.02rem];
-  }
-
   .about-letter-line {
     @apply mt-0.5 font-serif text-[0.78rem] leading-relaxed text-[#6E6763] md:text-[0.82rem];
   }

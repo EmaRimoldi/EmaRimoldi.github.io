@@ -37,7 +37,7 @@ export function AboutLetterHead() {
       <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-10 lg:gap-14">
         <div className="text-left">
           <p className="about-letter-kicker">From</p>
-          <p className="about-letter-name">Emanuele Rimoldi</p>
+          <p className="about-letter-line">Emanuele Rimoldi</p>
           <p className="about-letter-line">Cambridge, MA, USA</p>
           <p className="about-letter-line about-letter-meta">
             {dateLine ?? "\u00A0"}
@@ -45,7 +45,7 @@ export function AboutLetterHead() {
         </div>
         <div className="text-left md:text-right">
           <p className="about-letter-kicker md:ml-0">To</p>
-          <p className="about-letter-name">You</p>
+          <p className="about-letter-line">You</p>
           <p className="about-letter-line about-letter-to-place">
             wherever you happen to be
           </p>

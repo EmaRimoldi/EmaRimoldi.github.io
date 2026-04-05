@@ -1,6 +1,5 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
-import { PageHeader } from "@/components/page-header";
 import { AboutLetterHead } from "@/components/about-letter-head";
 
 const SCHOLAR = {
@@ -34,13 +33,6 @@ export default function AboutPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-12 md:py-16 lg:py-20">
-        <PageHeader
-          align="center"
-          className="!mb-7 md:!mb-9 items-center text-center"
-          eyebrow="About"
-          title=""
-        />
-
         <article
           className="about-letter mx-auto max-w-[38rem]"
           lang="en"
