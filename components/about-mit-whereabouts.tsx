@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 
 const MIT_TIMEZONE = "America/New_York";
 
-const COORDINATES = "Cambridge, MA — 42.3601° N, 71.0942° W";
-
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   timeZone: MIT_TIMEZONE,
   weekday: "long",
@@ -22,17 +20,11 @@ export function AboutMitWhereabouts() {
   }, []);
 
   return (
-    <div className="about-bio-titoletto space-y-1.5">
-      <p className="about-bio-titoletto-coords">{COORDINATES}</p>
-      <p className="about-bio-titoletto-time">
-        {now ? (
-          <>
-            {dateFmt.format(now)}
-            <span className="about-bio-titoletto-tz"> — MIT local</span>
-          </>
-        ) : (
-          <span className="text-[#9A928A]">—</span>
-        )}
+    <div className="about-bio-titoletto">
+      <p className="about-bio-whoami-line font-serif text-[0.8125rem] leading-relaxed tracking-wide text-[#6E6763] md:text-[0.9rem]">
+        <span className="font-medium text-[#262424]">Who am I?</span>{" "}
+        42.3601° N, 71.0942° W
+        {now ? `, ${dateFmt.format(now)}` : ", —"}
       </p>
     </div>
   );
