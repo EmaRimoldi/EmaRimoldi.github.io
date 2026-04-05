@@ -148,6 +148,10 @@ body {
     @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
+  .about-coords-heading {
+    @apply font-serif text-xs font-medium uppercase tracking-[0.16em] text-[#9A928A] sm:text-sm md:text-base;
+  }
+
   /* Titoletto above first bio paragraph: MIT place + local time */
   .about-contact-link {
     @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];

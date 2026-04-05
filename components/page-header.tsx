@@ -46,6 +46,8 @@ type PageHeaderProps = {
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
+  /** When false, hides the bronze rule between eyebrow and title */
+  showRule?: boolean;
 };
 
 export function PageHeader({
@@ -54,6 +56,7 @@ export function PageHeader({
   subtitle,
   align = "left",
   className = "",
+  showRule = true,
 }: PageHeaderProps) {
   const center = align === "center";
   const showTitle = title != null && title !== "";
@@ -63,7 +66,9 @@ export function PageHeader({
       className={`page-header-root mb-12 flex flex-col gap-3 md:mb-16 md:gap-4 ${center ? "items-center text-center" : "items-start text-left"} ${className}`}
     >
       {eyebrow ? <p className="page-header-eyebrow">{eyebrow}</p> : null}
-      <DecorativeRule className={center ? "mx-auto" : ""} />
+      {showRule ? (
+        <DecorativeRule className={center ? "mx-auto" : ""} />
+      ) : null}
       {showTitle ? (
         <h1 className="page-header-title">{title}</h1>
       ) : null}

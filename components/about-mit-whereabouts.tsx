@@ -1,9 +1,9 @@
 const COORDS = "(42.3601° N, 71.0942° W)";
 
-/** Coordinates only, styled like the former “Education” section label. */
+/** Coordinates only: uppercase tracking, larger than section-label microtype. */
 export function AboutCoordsHeading() {
   return (
-    <span className="about-bio-section-label mx-auto block max-w-2xl text-center text-balance">
+    <span className="about-coords-heading mx-auto block max-w-2xl text-center text-balance">
       {COORDS}
     </span>
   );

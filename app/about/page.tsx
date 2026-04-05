@@ -36,8 +36,9 @@ export default function AboutPage() {
       <ContentContainer maxWidth="content" className="py-12 md:py-16 lg:py-20">
         <PageHeader
           align="center"
-          className="page-header-editorial !mb-8 md:!mb-10 items-center text-center"
+          className="!mb-8 md:!mb-10 items-center text-center"
           eyebrow="About"
+          showRule={false}
           title={<AboutCoordsHeading />}
         />
 
@@ -66,14 +67,14 @@ export default function AboutPage() {
           <p>
             I studied engineering physics at Politecnico di Milano for my
             bachelor&apos;s, then entered nuclear engineering through a joint
-            master&apos;s across ETH Zurich, EPFL, and PSI—I did not complete
+            master&apos;s across ETH Zurich, EPFL, and PSI. I did not complete
             that degree; when my interests pulled elsewhere, I moved into data
             science and computational neuroscience at EPFL, where the questions
             finally lined up with the work I wanted to pursue.
           </p>
 
           <p>
-            If you want to collaborate or trade ideas—coffee optional—say hi;
+            If you want to collaborate or trade ideas, coffee optional, say hi;
             I&apos;m always glad to learn from other people&apos;s notebooks.
           </p>
         </div>
