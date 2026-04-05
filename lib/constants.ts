@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Emanuele Rimoldi",
   description:
-    "AI researcher exploring intelligence, learning, and useful models: theory, agents, and the mathematical foundations of computation.",
+    "AI researcher focused on theory, agents, and the mathematical foundations of learning and useful models.",
   author: "Emanuele Rimoldi",
   url: "https://emarimoldi.github.io",
   og: {

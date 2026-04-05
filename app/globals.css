@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 @import "tailwindcss";
 
@@ -194,6 +195,25 @@ body {
     .about-letter-signature {
       font-size: 2.1rem;
     }
+  }
+
+  /* Landing: bold concise role; Box line in Spectral + quotes; attribution regular */
+  .home-hero-role {
+    @apply mx-auto max-w-lg text-sm font-semibold leading-snug text-[#251f1d] md:text-base;
+  }
+
+  .home-hero-quote {
+    @apply mx-auto max-w-xl text-center text-sm font-normal leading-relaxed text-[#5e564e] md:text-base;
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+  }
+
+  .home-hero-quote-attribution {
+    @apply text-[10px] font-normal not-italic text-[#5e564e] md:text-[11px];
+  }
+
+  .home-hero-quote-attribution cite {
+    @apply font-normal not-italic;
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */

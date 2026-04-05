@@ -10,21 +10,18 @@ export function HomeHero() {
           Emanuele Rimoldi
         </h1>
 
-        <p className="text-xs md:text-sm text-[#5e564e] max-w-xl mx-auto leading-relaxed">
-          AI researcher exploring intelligence, learning, and useful models:
-          theory, agents, and the mathematical foundations of computation.
+        <p className="home-hero-role">
+          AI researcher focused on theory, agents, and the mathematical foundations
+          of learning and useful models.
         </p>
 
         <blockquote className="mx-auto max-w-2xl space-y-3 px-5 py-2 md:px-8 md:py-4">
-          <p className="italic text-sm md:text-base lg:text-lg text-[#251f1d] leading-[1.5]">
-            All models are wrong, but some are useful.
+          <p className="home-hero-quote">
+            &#8220;All models are wrong, but some are useful.&#8221;
           </p>
-          <footer className="text-[10px] md:text-[11px] not-italic text-[#5e564e]">
-            <cite className="not-italic">George E. P. Box</cite>,{" "}
-            <cite className="not-italic">
-              Empirical Model-Building and Response Surfaces
-            </cite>{" "}
-            (1987)
+          <footer className="home-hero-quote-attribution">
+            <cite>George E. P. Box</cite>,{" "}
+            <cite>Empirical Model-Building and Response Surfaces</cite> (1987)
           </footer>
         </blockquote>
       </div>
