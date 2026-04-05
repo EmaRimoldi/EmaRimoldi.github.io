@@ -36,29 +36,30 @@ export default function AboutPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-16 md:py-24">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-14 lg:gap-16 md:items-start">
-          <aside className="order-2 md:order-1 md:col-span-4">
+        {/* Full-width intro; photo + bio share one row below so the portrait aligns with the narrative block */}
+        <PageHeader
+          className="page-header-editorial !mb-8 md:!mb-10"
+          eyebrow="About"
+          title={
+            <>
+              Hi there, I&apos;m Emanuele!{" "}
+              <span
+                className="about-wave-emoji"
+                role="img"
+                aria-label="Waving hand"
+              >
+                👋🏻
+              </span>
+            </>
+          }
+        />
+
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-start md:gap-11 lg:gap-14">
+          <aside className="order-2 flex justify-center md:order-1 md:col-span-4 md:justify-start md:pt-px">
             <AboutPortrait />
           </aside>
 
           <div className="order-1 md:order-2 md:col-span-8">
-            <PageHeader
-              className="page-header-editorial"
-              eyebrow="About"
-              title={
-                <>
-                  Hi there, I&apos;m Emanuele!{" "}
-                  <span
-                    className="about-wave-emoji"
-                    role="img"
-                    aria-label="Waving hand"
-                  >
-                    👋🏻
-                  </span>
-                </>
-              }
-            />
-
             <div className="about-bio space-y-6 md:space-y-7 text-left font-serif text-sm md:text-[0.95rem] leading-[1.72] text-[#6E6763]">
               <div className="space-y-3 md:space-y-3.5">
                 <AboutMitWhereabouts />
