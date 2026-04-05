@@ -125,21 +125,13 @@ body {
     @apply border-b border-[#DDD4CE]/80 pb-6 md:pb-8 mb-8 md:mb-10;
   }
 
-  /* About: measured column + whitespace hierarchy (no heavy vertical rule) */
+  /* About: measured column (legacy / other uses) */
   .about-prose {
     @apply text-left font-serif text-[0.8125rem] md:text-[0.9rem] leading-[1.72] text-[#6E6763];
   }
 
-  .about-prose-lead {
-    @apply max-w-none;
-  }
-
-  .about-education-block {
-    @apply mt-7 border-t border-[#DDD4CE]/55 pt-6 md:mt-8 md:pt-7;
-  }
-
-  .about-closing {
-    @apply text-[#5C5652];
+  .about-prose-centered {
+    @apply text-center text-pretty;
   }
 
   .about-bio-greeting {
