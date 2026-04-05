@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 @import "tailwindcss";
 
@@ -157,16 +158,40 @@ body {
     @apply text-left text-pretty;
   }
 
+  /* Closing line set as a pull-quote: single quotes, secondary typeface */
+  .about-letter-pullquote {
+    @apply mt-5 max-w-none text-left text-[0.72rem] leading-[1.65] text-[#7d7268] md:mt-6 md:text-[0.78rem] md:leading-[1.7];
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
   .about-letter-signoff {
-    @apply mt-8 border-t border-[#c4b6a8]/40 pt-6 md:mt-10 md:pt-7;
+    @apply mt-7 md:mt-9;
   }
 
   .about-letter-valediction {
-    @apply font-serif text-[0.85rem] italic text-[#524c48] md:text-[0.9rem];
+    @apply font-serif text-[0.95rem] italic text-[#403a36] md:text-base;
   }
 
   .about-letter-signature {
-    @apply mt-3 font-serif text-[1rem] font-semibold tracking-tight text-[#251f1d] md:text-[1.08rem];
+    @apply mt-2.5 font-serif text-[1.2rem] font-semibold tracking-tight text-[#251f1d] md:mt-3 md:text-[1.35rem];
+  }
+
+  /* Landing: role line outweighs the quoted aphorism */
+  .home-hero-tagline {
+    @apply max-w-xl mx-auto font-medium leading-relaxed text-[#251f1d] text-sm md:text-base lg:text-lg;
+  }
+
+  .home-hero-quote-block {
+    @apply mx-auto max-w-lg px-4 md:px-6;
+  }
+
+  .home-hero-quote {
+    @apply text-center text-[0.7rem] leading-[1.55] text-[#7d7268] md:text-xs md:leading-relaxed;
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
