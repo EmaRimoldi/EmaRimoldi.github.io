@@ -23,19 +23,14 @@ export function AboutMitWhereabouts() {
   }, []);
 
   return (
-    <div className="about-bio-titoletto">
-      <p className="about-bio-whoami-line font-serif text-[0.8125rem] leading-relaxed tracking-wide md:text-[0.9rem]">
-        {now ? (
-          <>
-            <span className="font-medium text-[#262424]">
-              {dateFmt.format(now)}
-            </span>
-            <span className="text-[#6E6763]"> @ {COORDS}</span>
-          </>
-        ) : (
-          <span className="text-[#9A928A]">—</span>
-        )}
-      </p>
-    </div>
+    <p className="about-bio-section-label max-w-2xl">
+      {now ? (
+        <>
+          {dateFmt.format(now)} @ {COORDS}
+        </>
+      ) : (
+        "—"
+      )}
+    </p>
   );
 }

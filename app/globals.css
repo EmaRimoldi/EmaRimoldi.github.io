@@ -152,14 +152,6 @@ body {
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
-  .about-bio-titoletto {
-    @apply mb-1;
-  }
-
-  .about-bio-whoami-line {
-    @apply max-w-2xl;
-  }
-
   .about-contact-link {
     @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
   }
