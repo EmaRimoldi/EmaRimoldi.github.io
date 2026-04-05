@@ -13,12 +13,12 @@ export function Footer() {
       <div className="site-container py-3.5 md:py-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
           {/* Left: Copyright */}
-          <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-[#8A827A]">
+          <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#8A827A]">
             © {currentYear} Emanuele Rimoldi
           </p>
 
           {/* Right: Email and Social Links */}
-          <div className="flex items-center gap-5 md:gap-7 text-xs text-[#6E6763]">
+          <div className="flex items-center gap-5 md:gap-7 text-[11px] text-[#6E6763] md:text-xs">
             <Link
               href={contactConfig.email.href}
               className="hover:text-[#262424] transition-colors duration-200"

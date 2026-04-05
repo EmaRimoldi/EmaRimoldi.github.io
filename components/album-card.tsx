@@ -19,7 +19,7 @@ export function AlbumCard({ title, artist, image, spotifyUrl }: AlbumCardProps) 
       rel="noopener noreferrer"
       className="group block transition-transform duration-200 hover:scale-105"
     >
-      <div className="aspect-square bg-[#E8E1DA] rounded-lg overflow-hidden flex items-center justify-center text-[#6E6763] text-sm mb-3">
+      <div className="aspect-square bg-[#E8E1DA] rounded-lg overflow-hidden flex items-center justify-center text-[#6E6763] text-xs mb-3">
         {image && !imageError ? (
           <img
             src={image}
@@ -32,7 +32,7 @@ export function AlbumCard({ title, artist, image, spotifyUrl }: AlbumCardProps) 
         )}
       </div>
       <div className="space-y-1">
-        <p className="text-sm font-medium text-[#262424] line-clamp-2 group-hover:text-[#6E6763] transition-colors duration-200">
+        <p className="text-xs font-medium text-[#262424] line-clamp-2 group-hover:text-[#6E6763] transition-colors duration-200 md:text-sm">
           {title}
         </p>
         {artist && (

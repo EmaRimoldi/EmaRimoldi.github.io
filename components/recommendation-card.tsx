@@ -18,13 +18,13 @@ export function RecommendationCard({
           {category}
         </span>
       </div>
-      <h3 className="text-lg md:text-xl font-semibold leading-snug mb-1 text-[#262424]">
+      <h3 className="text-base md:text-lg font-semibold leading-snug mb-1 text-[#262424]">
         {title}
       </h3>
       {author && (
-        <p className="text-sm text-[#6E6763] mb-3 italic">by {author}</p>
+        <p className="text-xs text-[#6E6763] mb-3 italic md:text-sm">by {author}</p>
       )}
-      <p className="text-sm md:text-base text-[#6E6763] leading-relaxed">
+      <p className="text-xs md:text-sm text-[#6E6763] leading-relaxed">
         {note}
       </p>
     </div>

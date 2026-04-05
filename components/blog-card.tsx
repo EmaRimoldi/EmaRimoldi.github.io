@@ -17,20 +17,20 @@ export function BlogCard({ post, index }: BlogCardProps) {
     >
       <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-10 md:gap-14">
         <span
-          className="shrink-0 font-serif text-sm tabular-nums text-[#9A928A] tracking-[0.12em] pt-1 select-none"
+          className="shrink-0 font-serif text-xs tabular-nums text-[#9A928A] tracking-[0.12em] pt-1 select-none md:text-[0.8125rem]"
           aria-hidden
         >
           {n}
         </span>
         <div className="min-w-0 flex-1 text-left space-y-2 md:space-y-3">
-          <h3 className="font-serif text-xl md:text-2xl font-semibold text-[#262424] leading-snug tracking-tight group-hover:text-[#1a1818] transition-colors duration-300">
+          <h3 className="font-serif text-lg md:text-xl font-semibold text-[#262424] leading-snug tracking-tight group-hover:text-[#1a1818] transition-colors duration-300">
             {post.title}
           </h3>
           <BlogPostMetaLine meta={post} variant="card" />
-          <p className="font-serif text-base md:text-[1.05rem] text-[#6E6763] leading-relaxed max-w-2xl">
+          <p className="font-serif text-sm md:text-[0.95rem] text-[#6E6763] leading-relaxed max-w-2xl">
             {post.description}
           </p>
-          <span className="inline-flex items-center gap-1.5 pt-2 text-sm text-[#9A928A] group-hover:text-[#262424] transition-colors duration-300 font-serif">
+          <span className="inline-flex items-center gap-1.5 pt-2 text-xs text-[#9A928A] group-hover:text-[#262424] transition-colors duration-300 font-serif md:text-sm">
             Read
             <span
               aria-hidden

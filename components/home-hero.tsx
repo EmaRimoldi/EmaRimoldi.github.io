@@ -14,16 +14,16 @@ export function HomeHero() {
     <main className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center pt-6 md:pt-12">
       <HeroCornerFrame />
 
-      <div className="relative z-10 w-full self-stretch space-y-8 md:space-y-12">
+      <div className="relative z-10 w-full self-stretch space-y-6 md:space-y-10">
         <h1
-          className="home-soft-reveal text-xl md:text-3xl lg:text-4xl font-medium tracking-[-0.02em] text-[#262424] leading-[1.1]"
+          className="home-soft-reveal text-lg md:text-2xl lg:text-3xl font-medium tracking-[-0.02em] text-[#262424] leading-[1.1]"
           style={delay(0)}
         >
           Emanuele Rimoldi
         </h1>
 
         <p
-          className="home-soft-reveal text-sm md:text-base text-[#6E6763] max-w-xl mx-auto leading-relaxed"
+          className="home-soft-reveal text-xs md:text-sm text-[#6E6763] max-w-xl mx-auto leading-relaxed"
           style={delay(1)}
         >
           AI researcher exploring intelligence, learning, and useful models:
@@ -42,10 +42,10 @@ export function HomeHero() {
           className="home-soft-reveal mx-auto max-w-2xl space-y-3 px-5 py-2 md:px-8 md:py-4"
           style={delay(3)}
         >
-          <p className="italic text-base md:text-lg lg:text-xl text-[#262424] leading-[1.5]">
+          <p className="italic text-sm md:text-base lg:text-lg text-[#262424] leading-[1.5]">
             All models are wrong, but some are useful.
           </p>
-          <footer className="text-[11px] md:text-xs not-italic text-[#6E6763]">
+          <footer className="text-[10px] md:text-[11px] not-italic text-[#6E6763]">
             <cite className="not-italic">George E. P. Box</cite>,{" "}
             <cite className="not-italic">
               Empirical Model-Building and Response Surfaces

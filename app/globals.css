@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Slightly smaller type scale site-wide (~15px from 16px default) */
+  font-size: 90%;
 }
 
 body {
@@ -80,7 +82,7 @@ body {
   }
 
   .nav-link {
-    @apply text-base transition-opacity duration-200 hover:opacity-60;
+    @apply text-xs transition-opacity duration-200 hover:opacity-60 md:text-sm;
   }
 
   .nav-link-active {
@@ -108,19 +110,19 @@ body {
   }
 
   .page-header-eyebrow {
-    @apply font-serif text-[0.65rem] uppercase tracking-[0.22em] text-[#9A928A];
+    @apply font-serif text-[0.6rem] uppercase tracking-[0.22em] text-[#9A928A];
   }
 
   .page-header-title {
-    @apply font-serif text-2xl md:text-3xl text-[#262424] leading-[1.15] tracking-tight;
+    @apply font-serif text-lg md:text-xl text-[#262424] leading-[1.15] tracking-tight;
   }
 
   .page-header-subtitle {
-    @apply font-serif text-base md:text-lg text-[#6E6763] leading-relaxed;
+    @apply font-serif text-xs md:text-sm text-[#6E6763] leading-relaxed;
   }
 
   .page-header-editorial {
-    @apply border-b border-[#DDD4CE]/80 pb-8 md:pb-10 mb-10 md:mb-14;
+    @apply border-b border-[#DDD4CE]/80 pb-6 md:pb-8 mb-8 md:mb-10;
   }
 
   /* About: subtle editorial frame — one accent, no heavy boxes */
@@ -144,11 +146,11 @@ body {
   }
 
   .about-bio-greeting {
-    @apply font-serif text-lg md:text-xl text-[#262424] leading-snug tracking-tight;
+    @apply font-serif text-base md:text-lg text-[#262424] leading-snug tracking-tight;
   }
 
   .about-bio-section-label {
-    @apply font-serif text-[0.65rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
+    @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
@@ -214,35 +216,35 @@ body {
   }
 
   .blog-article-header {
-    @apply mb-12 md:mb-14;
+    @apply mb-10 md:mb-12;
   }
 
   .blog-article-title {
-    @apply max-w-[20ch] font-serif text-[2rem] font-semibold leading-[1.1] tracking-tight text-[#262424] text-balance md:max-w-none md:text-[2.65rem] lg:text-[2.8rem];
+    @apply max-w-[20ch] font-serif text-[1.4rem] font-semibold leading-[1.1] tracking-tight text-[#262424] text-balance md:max-w-none md:text-[1.75rem] lg:text-[1.9rem];
   }
 
   .blog-article-deck {
-    @apply mt-6 max-w-2xl font-serif text-lg italic leading-[1.55] text-[#5C5652] md:text-xl md:leading-[1.5];
+    @apply mt-5 max-w-2xl font-serif text-sm italic leading-[1.55] text-[#5C5652] md:text-base md:leading-[1.5];
   }
 
   .blog-article-meta-panel {
-    @apply mt-8 rounded-lg border border-[#DDD4CE]/70 bg-[#FAF6F1]/90 px-4 py-3.5 md:px-5 md:py-4;
+    @apply mt-6 rounded-lg border border-[#DDD4CE]/70 bg-[#FAF6F1]/90 px-3.5 py-3 md:px-4 md:py-3.5;
   }
 
   .blog-article-rule {
-    @apply mt-10 w-36;
+    @apply mt-8 w-32;
   }
 
   .blog-article-body {
-    @apply mt-12 space-y-6 md:mt-14 md:space-y-7;
+    @apply mt-10 space-y-5 md:mt-12 md:space-y-6;
   }
 
   .blog-article-body p {
-    @apply font-serif text-[1.0625rem] leading-[1.78] text-[#454039] md:text-[1.125rem] md:leading-[1.8];
+    @apply font-serif text-[0.9rem] leading-[1.76] text-[#454039] md:text-[0.95rem] md:leading-[1.78];
   }
 
   .blog-article-lead {
-    @apply text-[1.125rem] leading-[1.72] text-[#3a3632] md:text-[1.2rem] md:leading-[1.75];
+    @apply text-[0.95rem] leading-[1.7] text-[#3a3632] md:text-[1rem] md:leading-[1.72];
   }
 
   .blog-article-footer-nav a::before {
@@ -256,7 +258,7 @@ body {
   }
 
   .blog-references-heading {
-    @apply mb-6 font-serif text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#9A928A];
+    @apply mb-5 font-serif text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#9A928A];
   }
 
   .blog-references-list {
@@ -265,7 +267,7 @@ body {
   }
 
   .blog-references-item {
-    @apply relative mb-4 pl-9 font-serif text-sm leading-[1.65] text-[#454039] last:mb-0 md:text-[0.95rem] md:leading-[1.7];
+    @apply relative mb-3.5 pl-9 font-serif text-[0.75rem] leading-[1.62] text-[#454039] last:mb-0 md:text-[0.8125rem] md:leading-[1.68];
     counter-increment: blog-ref;
   }
 

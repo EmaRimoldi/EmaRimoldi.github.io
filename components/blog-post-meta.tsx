@@ -28,7 +28,7 @@ export function BlogPostMetaLine({
   const base =
     variant === "card"
       ? "font-serif text-[11px] md:text-xs text-[#9A928A] tracking-[0.02em]"
-      : "font-serif text-xs md:text-sm text-[#9A928A] tracking-[0.02em]";
+      : "font-serif text-[11px] md:text-xs text-[#9A928A] tracking-[0.02em]";
 
   const core = [
     meta.location,

@@ -15,7 +15,7 @@ export default function PhotographyPage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="photo-placeholder-tile aspect-[3/2] rounded-xl border border-[#DDD4CE]/80 flex flex-col items-center justify-center gap-2 text-[#9A928A] font-serif text-sm md:text-base px-4 text-center"
+              className="photo-placeholder-tile aspect-[3/2] rounded-xl border border-[#DDD4CE]/80 flex flex-col items-center justify-center gap-2 text-[#9A928A] font-serif text-xs md:text-sm px-4 text-center"
             >
               <span className="text-[0.65rem] tracking-[0.18em] uppercase text-[#B5ADA5]">
                 Placeholder

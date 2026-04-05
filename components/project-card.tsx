@@ -20,16 +20,16 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
 
         <div className="min-w-0 flex-1 space-y-4">
           <div>
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#262424] tracking-[-0.02em]">
+            <h2 className="font-serif text-lg md:text-xl font-semibold text-[#262424] tracking-[-0.02em]">
               {item.title}
             </h2>
-            <p className="mt-2 font-serif text-sm md:text-base text-[#6E6763] leading-relaxed">
+            <p className="mt-2 font-serif text-xs md:text-sm text-[#6E6763] leading-relaxed">
               {item.descriptor}
             </p>
           </div>
 
           {item.summary ? (
-            <p className="font-serif text-sm md:text-[0.9375rem] text-[#6E6763] leading-relaxed">
+            <p className="font-serif text-xs md:text-[0.875rem] text-[#6E6763] leading-relaxed">
               {item.summary}
             </p>
           ) : null}
@@ -53,7 +53,7 @@ export function ProjectCard({ item, index }: { item: ResearchItem; index: number
           </div>
 
           {item.links && (
-            <div className="flex flex-wrap gap-5 border-t border-[#DDD4CE]/50 pt-5 font-serif text-sm">
+            <div className="flex flex-wrap gap-5 border-t border-[#DDD4CE]/50 pt-4 font-serif text-xs md:text-sm">
               {item.links.paper && (
                 <a
                   href={item.links.paper}

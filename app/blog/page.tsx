@@ -25,7 +25,7 @@ export default function BlogPage() {
           <button
             type="button"
             onClick={() => setActiveTab("posts")}
-            className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-sm md:text-base tracking-wide transition-all duration-300 border border-transparent ${
+            className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-xs md:text-sm tracking-wide transition-all duration-300 border border-transparent ${
               activeTab === "posts"
                 ? "bg-[#E4DDD4] text-[#262424] shadow-sm border-[#D8D0C6]"
                 : "text-[#6E6763] hover:text-[#262424] hover:bg-[#EDE8E2]/60"
@@ -36,7 +36,7 @@ export default function BlogPage() {
           <button
             type="button"
             onClick={() => setActiveTab("recommendations")}
-            className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-sm md:text-base tracking-wide transition-all duration-300 border border-transparent ${
+            className={`px-5 md:px-6 py-2.5 rounded-full font-serif text-xs md:text-sm tracking-wide transition-all duration-300 border border-transparent ${
               activeTab === "recommendations"
                 ? "bg-[#E4DDD4] text-[#262424] shadow-sm border-[#D8D0C6]"
                 : "text-[#6E6763] hover:text-[#262424] hover:bg-[#EDE8E2]/60"
@@ -57,7 +57,7 @@ export default function BlogPage() {
 
           {activeTab === "recommendations" && (
             <section className="w-full border-t border-[#DDD4CE]/70 pt-8 md:pt-10">
-              <ul className="space-y-5 text-sm md:text-base leading-relaxed font-serif text-[#6E6763] text-left list-none pl-0">
+              <ul className="space-y-5 text-xs md:text-sm leading-relaxed font-serif text-[#6E6763] text-left list-none pl-0">
               <li className="relative pl-5 before:absolute before:left-0 before:top-[0.55em] before:h-1 before:w-1 before:rounded-full before:bg-[#C9B5A0] before:content-['']">
                 <a
                   href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"

@@ -25,7 +25,7 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`nav-link text-sm md:text-base whitespace-nowrap ${
+                    className={`nav-link whitespace-nowrap ${
                       isActive ? "nav-link-active" : ""
                     }`}
                   >
@@ -40,7 +40,7 @@ export function SiteHeader() {
           <div className="flex items-center justify-between gap-6 md:gap-8 lg:gap-10">
             <Link
               href="/"
-              className="font-serif text-sm md:text-base lg:text-lg font-medium text-[#262424] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap tracking-tight"
+              className="font-serif text-xs md:text-sm lg:text-base font-medium text-[#262424] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap tracking-tight"
             >
               {siteConfig.name}
             </Link>
@@ -54,7 +54,7 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`nav-link text-sm md:text-base whitespace-nowrap ${
+                    className={`nav-link whitespace-nowrap ${
                       isActive ? "nav-link-active" : ""
                     }`}
                   >
