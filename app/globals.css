@@ -148,8 +148,49 @@ body {
     @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
-  .about-where-heading {
-    @apply font-serif text-[0.62rem] font-medium leading-snug tracking-[0.02em] text-[#9A928A] sm:text-[0.68rem] md:text-[0.72rem];
+  /* About: epistolary layout */
+  .about-letter-kicker {
+    @apply mb-1.5 font-serif text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#9A928A];
+  }
+
+  .about-letter-name {
+    @apply font-serif text-[0.95rem] font-semibold tracking-[-0.01em] text-[#262424] md:text-[1.02rem];
+  }
+
+  .about-letter-line {
+    @apply mt-0.5 font-serif text-[0.78rem] leading-relaxed text-[#6E6763] md:text-[0.82rem];
+  }
+
+  .about-letter-meta {
+    @apply mt-1 text-[#9A928A];
+  }
+
+  .about-letter-to-place {
+    @apply italic text-[#7a726a];
+  }
+
+  .about-letter-salutation {
+    @apply mb-5 font-serif text-[0.9rem] italic leading-snug text-[#262424] md:mb-6 md:text-[0.95rem];
+  }
+
+  .about-letter-body {
+    @apply space-y-4 font-serif text-[0.8125rem] leading-[1.78] text-[#4a4540] md:space-y-5 md:text-[0.9rem] md:leading-[1.8];
+  }
+
+  .about-letter-body p {
+    @apply text-left text-pretty;
+  }
+
+  .about-letter-signoff {
+    @apply mt-8 border-t border-[#DDD4CE]/40 pt-6 md:mt-10 md:pt-7;
+  }
+
+  .about-letter-valediction {
+    @apply font-serif text-[0.85rem] italic text-[#5C5652] md:text-[0.9rem];
+  }
+
+  .about-letter-signature {
+    @apply mt-3 font-serif text-[1rem] font-semibold tracking-tight text-[#262424] md:text-[1.08rem];
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
