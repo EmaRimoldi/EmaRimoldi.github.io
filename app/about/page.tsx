@@ -38,7 +38,6 @@ export default function AboutPage() {
           align="center"
           className="!mb-8 md:!mb-10 items-center text-center"
           eyebrow="About"
-          showRule={false}
           title={<AboutCoordsHeading />}
         />
 
