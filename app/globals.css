@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
 
 @import "tailwindcss";
 
@@ -129,13 +129,27 @@ body {
     @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#7d7268] mb-2;
   }
 
-  /* About: epistolary layout */
+  /* About: epistolary layout — system sans reads like a mail client */
+  .about-letter-mail {
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
   .about-letter-kicker {
-    @apply mb-1.5 font-serif text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#7d7268];
+    @apply mb-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#7d7268];
   }
 
   .about-letter-line {
-    @apply mt-0.5 font-serif text-[0.78rem] leading-relaxed text-[#5e564e] md:text-[0.82rem];
+    @apply mt-0.5 text-[0.78rem] leading-relaxed text-[#5e564e] md:text-[0.82rem];
   }
 
   .about-letter-meta {
@@ -147,23 +161,15 @@ body {
   }
 
   .about-letter-salutation {
-    @apply mb-5 font-serif text-[0.9rem] italic leading-snug text-[#251f1d] md:mb-6 md:text-[0.95rem];
+    @apply mb-5 text-[0.9rem] italic leading-snug text-[#251f1d] md:mb-6 md:text-[0.95rem];
   }
 
   .about-letter-body {
-    @apply space-y-4 font-serif text-[0.8125rem] leading-[1.78] text-[#403a36] md:space-y-5 md:text-[0.9rem] md:leading-[1.8];
+    @apply space-y-4 text-[0.8125rem] leading-[1.78] text-[#403a36] md:space-y-5 md:text-[0.9rem] md:leading-[1.8];
   }
 
   .about-letter-body p {
     @apply text-left text-pretty;
-  }
-
-  /* Closing line set as a pull-quote: single quotes, secondary typeface */
-  .about-letter-pullquote {
-    @apply mt-5 max-w-none text-left text-[0.72rem] leading-[1.65] text-[#7d7268] md:mt-6 md:text-[0.78rem] md:leading-[1.7];
-    font-family: "Spectral", Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
   }
 
   .about-letter-signoff {
@@ -171,27 +177,22 @@ body {
   }
 
   .about-letter-valediction {
-    @apply font-serif text-[0.95rem] italic text-[#403a36] md:text-base;
+    @apply text-[0.9rem] italic text-[#403a36] md:text-[0.95rem];
   }
 
   .about-letter-signature {
-    @apply mt-2.5 font-serif text-[1.2rem] font-semibold tracking-tight text-[#251f1d] md:mt-3 md:text-[1.35rem];
+    @apply mt-2 text-[#251f1d] md:mt-2.5;
+    font-family: "Caveat", cursive;
+    font-size: 1.85rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.1;
   }
 
-  /* Landing: role line outweighs the quoted aphorism */
-  .home-hero-tagline {
-    @apply max-w-xl mx-auto font-medium leading-relaxed text-[#251f1d] text-sm md:text-base lg:text-lg;
-  }
-
-  .home-hero-quote-block {
-    @apply mx-auto max-w-lg px-4 md:px-6;
-  }
-
-  .home-hero-quote {
-    @apply text-center text-[0.7rem] leading-[1.55] text-[#7d7268] md:text-xs md:leading-relaxed;
-    font-family: "Spectral", Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
+  @media (min-width: 768px) {
+    .about-letter-signature {
+      font-size: 2.1rem;
+    }
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */

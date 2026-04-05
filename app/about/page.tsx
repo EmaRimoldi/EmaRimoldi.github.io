@@ -34,7 +34,7 @@ export default function AboutPage() {
     <PageShell>
       <ContentContainer maxWidth="content" className="py-12 md:py-16 lg:py-20">
         <article
-          className="about-letter mx-auto max-w-[38rem]"
+          className="about-letter about-letter-mail mx-auto max-w-[38rem]"
           lang="en"
         >
           <AboutLetterHead />
@@ -72,13 +72,13 @@ export default function AboutPage() {
               science and computational neuroscience at EPFL, where the
               questions finally lined up with the work I wanted to pursue.
             </p>
-          </div>
 
-          <p className="about-letter-pullquote">
-            &#8216;I am always glad to hear from others. If you want to collaborate
-            or trade ideas, coffee optional, say hi; I learn best from other
-            people&#8217;s notebooks.&#8217;
-          </p>
+            <p>
+              I am always glad to hear from others. If you want to collaborate or
+              trade ideas, coffee optional, say hi; I learn best from other
+              people&apos;s notebooks.
+            </p>
+          </div>
 
           <footer className="about-letter-signoff">
             <p className="about-letter-valediction">Best,</p>
