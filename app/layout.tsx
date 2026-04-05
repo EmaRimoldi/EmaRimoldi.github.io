@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
   keywords: ["research", "AI", "photography", "music", "writing"],
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     type: siteConfig.og.type as any,
     locale: siteConfig.og.locale,
