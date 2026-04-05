@@ -23,9 +23,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
           {n}
         </span>
         <div className="min-w-0 flex-1 text-left space-y-2 md:space-y-3">
-          <h3 className="font-serif text-lg md:text-xl font-semibold text-[#251f1d] leading-snug tracking-tight group-hover:text-[#1c1715] transition-colors duration-300">
-            {post.title}
-          </h3>
+          <h3 className="blog-card-title">{post.title}</h3>
           <BlogPostMetaLine meta={post} variant="card" />
           <p className="font-serif text-sm md:text-[0.95rem] text-[#5e564e] leading-relaxed max-w-2xl">
             {post.description}

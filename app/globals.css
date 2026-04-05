@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap");
 
 @import "tailwindcss";
 
@@ -217,6 +218,17 @@ body {
     );
   }
 
+  /* Blog listing + posts: Newsreader headlines (editorial, matches atelier ink + sienna hover) */
+  .blog-card-title {
+    font-family: "Newsreader", ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    @apply text-[1.125rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#2a221e] transition-colors duration-300 md:text-[1.35rem];
+  }
+
+  a.group:hover .blog-card-title {
+    color: #9a6b52;
+  }
+
   /* Blog article: editorial column */
   .blog-nav-back::before {
     content: "← ";
@@ -228,7 +240,9 @@ body {
   }
 
   .blog-article-title {
-    @apply max-w-[20ch] font-serif text-[1.4rem] font-semibold leading-[1.1] tracking-tight text-[#251f1d] text-balance md:max-w-none md:text-[1.75rem] lg:text-[1.9rem];
+    @apply max-w-[20ch] text-[1.45rem] font-semibold leading-[1.12] tracking-[-0.02em] text-[#2a221e] text-balance md:max-w-none md:text-[1.8rem] lg:text-[1.95rem];
+    font-family: "Newsreader", ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
   }
 
   .blog-article-deck {
