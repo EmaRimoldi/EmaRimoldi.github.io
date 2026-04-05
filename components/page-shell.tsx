@@ -3,7 +3,7 @@ import { Footer } from "./footer";
 
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="site-page-bg min-h-screen text-[#262424] flex flex-col">
+    <div className="site-page-bg min-h-screen text-[#251f1d] flex flex-col">
       <SiteHeader />
       <main className="flex-1 pb-16">
         {children}

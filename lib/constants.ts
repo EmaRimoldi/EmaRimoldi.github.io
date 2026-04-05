@@ -1,5 +1,3 @@
-import { socialLinksConfig } from "./site-config";
-
 export const siteConfig = {
   name: "Emanuele Rimoldi",
   description:
@@ -20,13 +18,12 @@ export const navItems = [
   { label: "Music", href: "/music" },
 ];
 
-export const socialLinks = socialLinksConfig;
-
 export const colors = {
-  background: "#F5EEE9",
-  text: "#262424",
-  textSoft: "#6E6763",
-  line: "#DDD4CE",
+  background: "#ebe3db",
+  text: "#251f1d",
+  textSoft: "#5e564e",
+  line: "#c4b6a8",
+  accent: "#9a6b52",
 };
 
 export const spacing = {

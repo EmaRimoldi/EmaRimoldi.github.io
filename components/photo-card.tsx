@@ -17,7 +17,7 @@ export function PhotoCard({
 
   return (
     <div
-      className={`${aspectClasses[aspectRatio]} bg-[#E8E1DA] rounded-lg overflow-hidden`}
+      className={`${aspectClasses[aspectRatio]} bg-[#d5cdc4] rounded-lg overflow-hidden`}
     >
       <img
         src={image}

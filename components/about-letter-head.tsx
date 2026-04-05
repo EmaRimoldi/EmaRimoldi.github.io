@@ -31,7 +31,7 @@ export function AboutLetterHead() {
 
   return (
     <header
-      className="about-letter-head mb-8 border-b border-[#DDD4CE]/55 pb-7 md:mb-9 md:pb-8"
+      className="about-letter-head mb-8 border-b border-[#c4b6a8]/55 pb-7 md:mb-9 md:pb-8"
       aria-label="Letter routing"
     >
       <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-10 lg:gap-14">

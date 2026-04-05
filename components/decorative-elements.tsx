@@ -8,7 +8,7 @@ export function HeroCornerFrame() {
       aria-hidden
     >
       <svg
-        className="h-full w-full text-[#C9B5A0]"
+        className="h-full w-full text-[#9a6b52]"
         viewBox="0 0 100 100"
         fill="none"
         preserveAspectRatio="none"
@@ -51,7 +51,7 @@ export function HeroCornerFrame() {
 export function FooterOrnament() {
   return (
     <div
-      className="pointer-events-none flex items-center justify-center gap-2 text-[#C9B5A0]"
+      className="pointer-events-none flex items-center justify-center gap-2 text-[#9a6b52]"
       aria-hidden
     >
       <span className="h-px w-10 bg-current opacity-50 sm:w-14" />

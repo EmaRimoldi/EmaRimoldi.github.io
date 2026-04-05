@@ -27,8 +27,8 @@ export function BlogPostMetaLine({
 }) {
   const base =
     variant === "card"
-      ? "font-serif text-[11px] md:text-xs text-[#9A928A] tracking-[0.02em]"
-      : "font-serif text-[11px] md:text-xs text-[#9A928A] tracking-[0.02em]";
+      ? "font-serif text-[11px] md:text-xs text-[#7d7268] tracking-[0.02em]"
+      : "font-serif text-[11px] md:text-xs text-[#7d7268] tracking-[0.02em]";
 
   const core = [
     meta.location,
@@ -46,7 +46,7 @@ export function BlogPostMetaLine({
         <ul className="flex flex-wrap gap-2 pt-0.5">
           {meta.tags!.map((tag) => (
             <li key={tag}>
-              <span className="inline-block rounded-full border border-[#DDD4CE]/90 bg-[#F3EDE6]/50 px-2.5 py-0.5 font-serif text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-[#6E6763]">
+              <span className="inline-block rounded-full border border-[#c4b6a8]/90 bg-[#e8e0d8]/50 px-2.5 py-0.5 font-serif text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-[#5e564e]">
                 {tag}
               </span>
             </li>

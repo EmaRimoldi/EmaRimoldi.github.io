@@ -19,7 +19,7 @@ export function BlogArticleLayout({
       <ContentContainer maxWidth="reading" className="py-16 md:py-24">
         <Link
           href="/blog"
-          className="blog-nav-back mb-10 md:mb-12 inline-block text-xs text-[#6E6763] transition-colors hover:text-[#262424] md:text-sm"
+          className="blog-nav-back mb-10 md:mb-12 inline-block text-xs text-[#5e564e] transition-colors hover:text-[#251f1d] md:text-sm"
         >
           Back to Blog
         </Link>
@@ -40,10 +40,10 @@ export function BlogArticleLayout({
           ) : null}
         </article>
 
-        <div className="blog-article-footer-nav mt-20 border-t border-[#DDD4CE]/50 pt-10">
+        <div className="blog-article-footer-nav mt-20 border-t border-[#c4b6a8]/50 pt-10">
           <Link
             href="/blog"
-            className="inline-block text-xs text-[#262424] transition-opacity hover:opacity-65 md:text-sm"
+            className="inline-block text-xs text-[#251f1d] transition-opacity hover:opacity-65 md:text-sm"
           >
             Back to all articles
           </Link>

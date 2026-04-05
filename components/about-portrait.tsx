@@ -10,7 +10,7 @@ export function AboutPortrait() {
 
   return (
     <figure className="m-0 w-full max-w-[118px] shrink-0 sm:max-w-[128px] md:max-w-[136px]">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2px] border border-[#DDD4CE]/90 bg-[#EDE8E2]/50 shadow-[0_1px_6px_rgba(38,36,36,0.05)]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2px] border border-[#c4b6a8]/90 bg-[#e2dad2]/50 shadow-[0_1px_6px_rgba(37, 31, 29,0.05)]">
         {!error ? (
           <Image
             src={SRC}
@@ -23,7 +23,7 @@ export function AboutPortrait() {
             onError={() => setError(true)}
           />
         ) : (
-          <div className="flex h-full min-h-[72px] items-center justify-center px-2 text-center font-serif text-[10px] text-[#9A928A]">
+          <div className="flex h-full min-h-[72px] items-center justify-center px-2 text-center font-serif text-[10px] text-[#7d7268]">
             Photo unavailable
           </div>
         )}

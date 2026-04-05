@@ -8,10 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "site-bg": "#F5EEE9",
-        "site-text": "#262424",
-        "site-text-soft": "#6E6763",
-        "site-line": "#DDD4CE",
+        "site-bg": "#ebe3db",
+        "site-text": "#251f1d",
+        "site-text-soft": "#5e564e",
+        "site-line": "#c4b6a8",
       },
       fontFamily: {
         serif: ["Cormorant Garamond", "ui-serif", "Georgia", "serif"],

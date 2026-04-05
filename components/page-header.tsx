@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export function DecorativeRule({ className = "" }: { className?: string }) {
   return (
     <svg
-      className={`h-5 w-36 shrink-0 text-[#C9B5A0] ${className}`}
+      className={`h-5 w-36 shrink-0 text-[#9a6b52] ${className}`}
       viewBox="0 0 144 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

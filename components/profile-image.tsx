@@ -20,8 +20,8 @@ export function ProfileImage() {
         />
       ) : null}
       {!imageLoaded && imageError && (
-        <div className="w-48 h-48 md:w-56 md:h-56 bg-[#DDD4CE] rounded-lg shadow-sm flex items-center justify-center">
-          <p className="text-[#6E6763] text-sm text-center px-4">
+        <div className="w-48 h-48 md:w-56 md:h-56 bg-[#c4b6a8] rounded-lg shadow-sm flex items-center justify-center">
+          <p className="text-[#5e564e] text-sm text-center px-4">
             Profile image coming soon
           </p>
         </div>

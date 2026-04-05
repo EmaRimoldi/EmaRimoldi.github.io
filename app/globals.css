@@ -2,6 +2,11 @@
 
 @import "tailwindcss";
 
+/*
+ * Color system — atelier / print-shop: shell-bisque paper (#ebe3db), warm coffee ink
+ * (#251f1d), burnt-sienna accent (#9a6b52), dusty rules (#c4b6a8), sage secondary ink.
+ */
+
 html {
   scroll-behavior: smooth;
   /* Slightly smaller type scale site-wide (~15px from 16px default) */
@@ -9,8 +14,8 @@ html {
 }
 
 body {
-  background-color: #f5eee9;
-  color: #262424;
+  background-color: #ebe3db;
+  color: #251f1d;
   font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
   font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
   text-rendering: optimizeLegibility;
@@ -19,23 +24,23 @@ body {
 }
 
 ::selection {
-  background-color: rgba(74, 92, 86, 0.2);
+  background-color: rgba(154, 107, 82, 0.18);
   color: inherit;
 }
 
-/* Soft paper lighting — restrained, print-like */
+/* Soft paper lighting — terracotta wash + cool corner bloom (atelier palette) */
 .site-page-bg {
-  background-color: #f5eee9;
+  background-color: #ebe3db;
   background-image:
     radial-gradient(
-      ellipse 130% 90% at 50% -25%,
-      rgba(201, 181, 160, 0.16),
-      transparent 58%
+      ellipse 125% 85% at 50% -22%,
+      rgba(154, 107, 82, 0.11),
+      transparent 55%
     ),
     radial-gradient(
-      ellipse 55% 45% at 100% 40%,
-      rgba(228, 221, 212, 0.45),
-      transparent 52%
+      ellipse 50% 42% at 100% 38%,
+      rgba(120, 132, 125, 0.12),
+      transparent 50%
     );
 }
 
@@ -69,15 +74,15 @@ body {
   }
 
   .text-soft {
-    @apply text-[#6E6763];
+    @apply text-[#5e564e];
   }
 
   .line-divider {
-    @apply border-t border-[#DDD4CE];
+    @apply border-t border-[#c4b6a8];
   }
 
   .body-text {
-    @apply text-[10px] md:text-xs text-[#6E6763] leading-relaxed;
+    @apply text-[10px] md:text-xs text-[#5e564e] leading-relaxed;
   }
 
   .page-header-root {
@@ -85,29 +90,29 @@ body {
   }
 
   .page-header-eyebrow {
-    @apply font-serif text-[0.6rem] uppercase tracking-[0.22em] text-[#9A928A];
+    @apply font-serif text-[0.6rem] uppercase tracking-[0.22em] text-[#7d7268];
   }
 
   .page-header-title {
-    @apply font-serif text-lg md:text-xl text-[#262424] leading-[1.15] tracking-tight;
+    @apply font-serif text-lg md:text-xl text-[#251f1d] leading-[1.15] tracking-tight;
   }
 
   .page-header-subtitle {
-    @apply font-serif text-xs md:text-sm text-[#6E6763] leading-relaxed;
+    @apply font-serif text-xs md:text-sm text-[#5e564e] leading-relaxed;
   }
 
   .page-header-editorial {
-    @apply border-b border-[#DDD4CE]/80 pb-6 md:pb-8 mb-8 md:mb-10;
+    @apply border-b border-[#c4b6a8]/80 pb-6 md:pb-8 mb-8 md:mb-10;
   }
 
   /* About: measured column (legacy / other uses) */
   .about-prose {
-    @apply text-left font-serif text-[0.8125rem] md:text-[0.9rem] leading-[1.72] text-[#6E6763];
+    @apply text-left font-serif text-[0.8125rem] md:text-[0.9rem] leading-[1.72] text-[#5e564e];
   }
 
   /* About: justified blocks, equal line length (ragged only at paragraph ends) */
   .about-prose-stack {
-    @apply space-y-5 font-serif text-[0.8125rem] leading-[1.75] text-[#6E6763] md:text-[0.9rem] md:space-y-6;
+    @apply space-y-5 font-serif text-[0.8125rem] leading-[1.75] text-[#5e564e] md:text-[0.9rem] md:space-y-6;
   }
 
   .about-prose-stack p {
@@ -116,36 +121,36 @@ body {
   }
 
   .about-bio-greeting {
-    @apply font-serif text-base md:text-lg text-[#262424] leading-snug tracking-tight;
+    @apply font-serif text-base md:text-lg text-[#251f1d] leading-snug tracking-tight;
   }
 
   .about-bio-section-label {
-    @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
+    @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#7d7268] mb-2;
   }
 
   /* About: epistolary layout */
   .about-letter-kicker {
-    @apply mb-1.5 font-serif text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#9A928A];
+    @apply mb-1.5 font-serif text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-[#7d7268];
   }
 
   .about-letter-line {
-    @apply mt-0.5 font-serif text-[0.78rem] leading-relaxed text-[#6E6763] md:text-[0.82rem];
+    @apply mt-0.5 font-serif text-[0.78rem] leading-relaxed text-[#5e564e] md:text-[0.82rem];
   }
 
   .about-letter-meta {
-    @apply mt-1 text-[#9A928A];
+    @apply mt-1 text-[#7d7268];
   }
 
   .about-letter-to-place {
-    @apply italic text-[#7a726a];
+    @apply italic text-[#6d655d];
   }
 
   .about-letter-salutation {
-    @apply mb-5 font-serif text-[0.9rem] italic leading-snug text-[#262424] md:mb-6 md:text-[0.95rem];
+    @apply mb-5 font-serif text-[0.9rem] italic leading-snug text-[#251f1d] md:mb-6 md:text-[0.95rem];
   }
 
   .about-letter-body {
-    @apply space-y-4 font-serif text-[0.8125rem] leading-[1.78] text-[#4a4540] md:space-y-5 md:text-[0.9rem] md:leading-[1.8];
+    @apply space-y-4 font-serif text-[0.8125rem] leading-[1.78] text-[#403a36] md:space-y-5 md:text-[0.9rem] md:leading-[1.8];
   }
 
   .about-letter-body p {
@@ -153,25 +158,25 @@ body {
   }
 
   .about-letter-signoff {
-    @apply mt-8 border-t border-[#DDD4CE]/40 pt-6 md:mt-10 md:pt-7;
+    @apply mt-8 border-t border-[#c4b6a8]/40 pt-6 md:mt-10 md:pt-7;
   }
 
   .about-letter-valediction {
-    @apply font-serif text-[0.85rem] italic text-[#5C5652] md:text-[0.9rem];
+    @apply font-serif text-[0.85rem] italic text-[#524c48] md:text-[0.9rem];
   }
 
   .about-letter-signature {
-    @apply mt-3 font-serif text-[1rem] font-semibold tracking-tight text-[#262424] md:text-[1.08rem];
+    @apply mt-3 font-serif text-[1rem] font-semibold tracking-tight text-[#251f1d] md:text-[1.08rem];
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
   .about-contact-link {
-    @apply text-[#262424] border-b border-dotted border-[#C4B8AE] pb-px transition-colors duration-200 hover:border-[#262424] hover:text-[#1a1818];
+    @apply text-[#251f1d] border-b border-dotted border-[#a8988a] pb-px transition-colors duration-200 hover:border-[#251f1d] hover:text-[#1c1715];
   }
 
   /* Scholar / external refs — distinct from body and from contact row */
   .about-supervisor-link {
-    @apply text-[#455C5A] border-b border-dotted border-[#A8B8B4] pb-px transition-colors duration-200 hover:text-[#2F3F3D] hover:border-[#5E7A76];
+    @apply text-[#3e534d] border-b border-dotted border-[#8fa39d] pb-px transition-colors duration-200 hover:text-[#2d3d38] hover:border-[#4d6561];
   }
 
   /* Photography placeholders: faint ruled texture */
@@ -197,15 +202,15 @@ body {
   }
 
   .blog-article-title {
-    @apply max-w-[20ch] font-serif text-[1.4rem] font-semibold leading-[1.1] tracking-tight text-[#262424] text-balance md:max-w-none md:text-[1.75rem] lg:text-[1.9rem];
+    @apply max-w-[20ch] font-serif text-[1.4rem] font-semibold leading-[1.1] tracking-tight text-[#251f1d] text-balance md:max-w-none md:text-[1.75rem] lg:text-[1.9rem];
   }
 
   .blog-article-deck {
-    @apply mt-5 max-w-2xl font-serif text-sm italic leading-[1.55] text-[#5C5652] md:text-base md:leading-[1.5];
+    @apply mt-5 max-w-2xl font-serif text-sm italic leading-[1.55] text-[#524c48] md:text-base md:leading-[1.5];
   }
 
   .blog-article-meta-panel {
-    @apply mt-6 rounded-lg border border-[#DDD4CE]/70 bg-[#FAF6F1]/90 px-3.5 py-3 md:px-4 md:py-3.5;
+    @apply mt-6 rounded-lg border border-[#c4b6a8]/70 bg-[#f2ebe4]/90 px-3.5 py-3 md:px-4 md:py-3.5;
   }
 
   .blog-article-rule {
@@ -217,11 +222,11 @@ body {
   }
 
   .blog-article-body p {
-    @apply font-serif text-[0.9rem] leading-[1.76] text-[#454039] md:text-[0.95rem] md:leading-[1.78];
+    @apply font-serif text-[0.9rem] leading-[1.76] text-[#403a36] md:text-[0.95rem] md:leading-[1.78];
   }
 
   .blog-article-lead {
-    @apply text-[0.95rem] leading-[1.7] text-[#3a3632] md:text-[1rem] md:leading-[1.72];
+    @apply text-[0.95rem] leading-[1.7] text-[#36322f] md:text-[1rem] md:leading-[1.72];
   }
 
   .blog-article-footer-nav a::before {
@@ -231,11 +236,11 @@ body {
 
   /* Blog: academic-style bibliography */
   .blog-references {
-    @apply mt-16 border-t border-[#DDD4CE]/70 pt-12 md:mt-20 md:pt-14;
+    @apply mt-16 border-t border-[#c4b6a8]/70 pt-12 md:mt-20 md:pt-14;
   }
 
   .blog-references-heading {
-    @apply mb-5 font-serif text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#9A928A];
+    @apply mb-5 font-serif text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#7d7268];
   }
 
   .blog-references-list {
@@ -244,13 +249,13 @@ body {
   }
 
   .blog-references-item {
-    @apply relative mb-3.5 pl-9 font-serif text-[0.75rem] leading-[1.62] text-[#454039] last:mb-0 md:text-[0.8125rem] md:leading-[1.68];
+    @apply relative mb-3.5 pl-9 font-serif text-[0.75rem] leading-[1.62] text-[#403a36] last:mb-0 md:text-[0.8125rem] md:leading-[1.68];
     counter-increment: blog-ref;
   }
 
   .blog-references-item::before {
     content: "[" counter(blog-ref) "]";
-    @apply absolute left-0 top-0 w-7 text-right font-medium tabular-nums text-[#9A928A];
+    @apply absolute left-0 top-0 w-7 text-right font-medium tabular-nums text-[#7d7268];
   }
 }
 
@@ -261,9 +266,9 @@ a {
 
 /* Remove outline on focus, rely on Tailwind focus-visible */
 a:focus-visible {
-  @apply outline-2 outline-offset-2 outline-[#262424];
+  @apply outline-2 outline-offset-2 outline-[#251f1d];
 }
 
 button:focus-visible {
-  @apply outline-2 outline-offset-2 outline-[#262424];
+  @apply outline-2 outline-offset-2 outline-[#251f1d];
 }

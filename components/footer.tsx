@@ -6,22 +6,22 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#DDD4CE]/90 bg-[#F5EEE9]/92 backdrop-blur-md backdrop-saturate-100 supports-[backdrop-filter]:bg-[#F5EEE9]/85">
+    <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#c4b6a8]/90 bg-[#ebe3db]/92 backdrop-blur-md backdrop-saturate-100 supports-[backdrop-filter]:bg-[#ebe3db]/85">
       <div className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2">
         <FooterOrnament />
       </div>
       <div className="site-container py-3.5 md:py-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
           {/* Left: Copyright */}
-          <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#8A827A]">
+          <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6f665e]">
             © {currentYear} Emanuele Rimoldi
           </p>
 
           {/* Right: Email and Social Links */}
-          <div className="flex items-center gap-5 md:gap-7 text-[11px] text-[#6E6763] md:text-xs">
+          <div className="flex items-center gap-5 md:gap-7 text-[11px] text-[#5e564e] md:text-xs">
             <Link
               href={contactConfig.email.href}
-              className="hover:text-[#262424] transition-colors duration-200"
+              className="hover:text-[#251f1d] transition-colors duration-200"
             >
               {contactConfig.email.value}
             </Link>
@@ -32,7 +32,7 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#262424] transition-colors duration-200"
+                  className="hover:text-[#251f1d] transition-colors duration-200"
                 >
                   {link.name}
                 </Link>
