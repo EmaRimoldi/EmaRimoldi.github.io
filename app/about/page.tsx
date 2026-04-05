@@ -3,7 +3,6 @@ import { ContentContainer } from "@/components/content-container";
 import { PageHeader } from "@/components/page-header";
 import { AboutMitWhereabouts } from "@/components/about-mit-whereabouts";
 import { AboutPortrait } from "@/components/about-portrait";
-import { contactConfig } from "@/lib/site-config";
 
 const SCHOLAR = {
   beneventano:
@@ -101,50 +100,6 @@ export default function AboutPage() {
                 hi. I&apos;m always happy to learn from other people&apos;s
                 notebooks 🤝
               </p>
-
-              <div className="pt-6 mt-2 border-t border-[#DDD4CE]/60">
-                <p className="about-bio-section-label mb-3">Where to find me</p>
-                <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-x-6 sm:gap-y-2 text-[#262424]">
-                  <li>
-                    <a
-                      href={contactConfig.email.href}
-                      className="about-contact-link"
-                    >
-                      {contactConfig.email.value}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={contactConfig.github.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="about-contact-link"
-                    >
-                      GitHub ({contactConfig.github.value})
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={contactConfig.linkedin.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="about-contact-link"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={contactConfig.instagram.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="about-contact-link"
-                    >
-                      Instagram ({contactConfig.instagram.value})
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
