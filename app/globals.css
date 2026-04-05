@@ -39,31 +39,6 @@ body {
     );
 }
 
-/* Landing: staggered reveal — duration 1s per line; delays via inline style */
-@keyframes home-soft-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(0.5rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.home-soft-reveal {
-  opacity: 0;
-  animation: home-soft-reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-soft-reveal {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @layer components {
   .site-header {
     @apply pt-3 md:pt-3 lg:pt-4;
