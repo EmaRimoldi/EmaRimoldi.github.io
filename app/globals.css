@@ -130,8 +130,14 @@ body {
     @apply text-left font-serif text-[0.8125rem] md:text-[0.9rem] leading-[1.72] text-[#6E6763];
   }
 
-  .about-prose-centered {
-    @apply text-center text-pretty;
+  /* About: justified blocks, equal line length (ragged only at paragraph ends) */
+  .about-prose-stack {
+    @apply space-y-5 font-serif text-[0.8125rem] leading-[1.75] text-[#6E6763] md:text-[0.9rem] md:space-y-6;
+  }
+
+  .about-prose-stack p {
+    @apply text-justify text-pretty hyphens-auto;
+    text-align-last: left;
   }
 
   .about-bio-greeting {

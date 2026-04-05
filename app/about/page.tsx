@@ -1,7 +1,7 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { PageHeader } from "@/components/page-header";
-import { AboutMitWhereabouts } from "@/components/about-mit-whereabouts";
+import { AboutCoordsHeading } from "@/components/about-mit-whereabouts";
 
 const SCHOLAR = {
   beneventano:
@@ -38,32 +38,45 @@ export default function AboutPage() {
           align="center"
           className="page-header-editorial !mb-8 md:!mb-10 items-center text-center"
           eyebrow="About"
-          title={<AboutMitWhereabouts asTitle />}
+          title={<AboutCoordsHeading />}
         />
 
-        <p className="about-prose-centered mx-auto max-w-[36rem] font-serif text-[0.8125rem] leading-[1.75] text-[#6E6763] md:text-[0.9rem]">
-          I&apos;m a Visiting Researcher at MIT, advised by{" "}
-          <SupervisorLink href={SCHOLAR.beneventano}>
-            Pierfrancesco Beneventano
-          </SupervisorLink>{" "}
-          and{" "}
-          <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
-          , working on agentic systems, fundamental limits of AI, and theorems
-          about training neural networks. Before that I worked on foundation
-          models at Logitech&apos;s CTO office with{" "}
-          <SupervisorLink href={SCHOLAR.dan}>Jonathan Dan</SupervisorLink>
-          ; at Idiap Research Institute,{" "}
-          <SupervisorLink href={SCHOLAR.garner}>Philip N. Garner</SupervisorLink>{" "}
-          supervised my research on bio-inspired text-to-speech and spiking
-          neural networks. I studied engineering physics at Politecnico di
-          Milano for my bachelor&apos;s, then entered nuclear engineering through
-          a joint master&apos;s across ETH Zurich, EPFL, and PSI—I did not
-          complete that degree; when my interests pulled elsewhere, I moved into
-          data science and computational neuroscience at EPFL, where the
-          questions finally lined up with the work I wanted to pursue. If you
-          want to collaborate or trade ideas—coffee optional—say hi; I&apos;m
-          always glad to learn from other people&apos;s notebooks.
-        </p>
+        <div className="about-prose-stack mx-auto max-w-[36rem]">
+          <p>
+            I&apos;m a Visiting Researcher at MIT, advised by{" "}
+            <SupervisorLink href={SCHOLAR.beneventano}>
+              Pierfrancesco Beneventano
+            </SupervisorLink>{" "}
+            and{" "}
+            <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
+            , working on agentic systems, fundamental limits of AI, and theorems
+            about training neural networks.
+          </p>
+
+          <p>
+            Before that I worked on foundation models at Logitech&apos;s CTO
+            office with{" "}
+            <SupervisorLink href={SCHOLAR.dan}>Jonathan Dan</SupervisorLink>
+            ; at Idiap Research Institute,{" "}
+            <SupervisorLink href={SCHOLAR.garner}>Philip N. Garner</SupervisorLink>{" "}
+            supervised my research on bio-inspired text-to-speech and spiking
+            neural networks.
+          </p>
+
+          <p>
+            I studied engineering physics at Politecnico di Milano for my
+            bachelor&apos;s, then entered nuclear engineering through a joint
+            master&apos;s across ETH Zurich, EPFL, and PSI—I did not complete
+            that degree; when my interests pulled elsewhere, I moved into data
+            science and computational neuroscience at EPFL, where the questions
+            finally lined up with the work I wanted to pursue.
+          </p>
+
+          <p>
+            If you want to collaborate or trade ideas—coffee optional—say hi;
+            I&apos;m always glad to learn from other people&apos;s notebooks.
+          </p>
+        </div>
       </ContentContainer>
     </PageShell>
   );
