@@ -35,44 +35,35 @@ export default function AboutPage() {
   return (
     <PageShell>
       <ContentContainer maxWidth="content" className="py-12 md:py-16 lg:py-20">
-        {/* Full-width intro; photo + bio share one row below so the portrait aligns with the narrative block */}
+        {/* Intro full width; below, marginalia photo + measured prose column */}
         <PageHeader
-          className="page-header-editorial !mb-6 md:!mb-8"
+          className="page-header-editorial !mb-8 md:!mb-10"
           eyebrow="About"
-          title={
-            <>
-              Hi there, I&apos;m Emanuele!{" "}
-              <span
-                className="about-wave-emoji"
-                role="img"
-                aria-label="Waving hand"
-              >
-                👋🏻
-              </span>
-            </>
-          }
+          title="Hi there, I'm Emanuele!"
         />
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start md:gap-9 lg:gap-11">
-          <aside className="order-2 flex justify-center md:order-1 md:col-span-3 md:justify-start md:pt-0.5">
+        {/* Editorial spread: narrow photo as marginalia + measured text column (not a heavy two-column wall) */}
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-[auto_minmax(0,min(40rem,100%))] md:gap-x-10 lg:gap-x-14 md:items-start">
+          <aside className="flex justify-center md:justify-start md:pt-[0.35rem]">
             <AboutPortrait />
           </aside>
 
-          <div className="order-1 md:order-2 md:col-span-9 lg:col-span-9">
-            <div className="about-bio space-y-5 md:space-y-6 text-left font-serif text-[0.8125rem] md:text-[0.9rem] leading-[1.7] text-[#6E6763]">
-              <div className="space-y-3 md:space-y-3.5">
-                <AboutMitWhereabouts />
-                <p>
-                  I&apos;m a Visiting Researcher at MIT, where I&apos;m advised by{" "}
-                  <SupervisorLink href={SCHOLAR.beneventano}>
-                    Pierfrancesco Beneventano
-                  </SupervisorLink>{" "}
-                  and{" "}
-                  <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
-                  . I work on agentic systems, fundamental limits of AI, and
-                  theorems about training neural networks.
-                </p>
-              </div>
+          <div className="about-prose min-w-0">
+            <header className="about-prose-lead mb-5 md:mb-6">
+              <AboutMitWhereabouts />
+            </header>
+
+            <div className="space-y-5 md:space-y-6">
+              <p>
+                I&apos;m a Visiting Researcher at MIT, where I&apos;m advised by{" "}
+                <SupervisorLink href={SCHOLAR.beneventano}>
+                  Pierfrancesco Beneventano
+                </SupervisorLink>{" "}
+                and{" "}
+                <SupervisorLink href={SCHOLAR.poggio}>Tomaso Poggio</SupervisorLink>
+                . I work on agentic systems, fundamental limits of AI, and
+                theorems about training neural networks.
+              </p>
 
               <p>
                 Before that, at Logitech&apos;s CTO office I worked on foundation
@@ -85,22 +76,23 @@ export default function AboutPage() {
                 supervised my research on bio-inspired text-to-speech and spiking
                 neural networks.
               </p>
-
-              <div>
-                <p className="about-bio-section-label">Education</p>
-                <p>
-                  BSc, Engineering Physics (Politecnico di Milano). MSc, Nuclear
-                  Engineering, joint program at ETH Zurich, EPFL, and PSI. MSc,
-                  Neuro-X: Data Science &amp; Computational Neuroscience (EPFL).
-                </p>
-              </div>
-
-              <p>
-                If you want to collaborate or swap ideas (coffee optional), say
-                hi. I&apos;m always happy to learn from other people&apos;s
-                notebooks 🤝
-              </p>
             </div>
+
+            <section className="about-education-block" aria-labelledby="about-education-heading">
+              <h2 id="about-education-heading" className="about-bio-section-label">
+                Education
+              </h2>
+              <p className="mt-2">
+                BSc, Engineering Physics (Politecnico di Milano). MSc, Nuclear
+                Engineering, joint program at ETH Zurich, EPFL, and PSI. MSc,
+                Neuro-X: Data Science &amp; Computational Neuroscience (EPFL).
+              </p>
+            </section>
+
+            <p className="about-closing mt-6 md:mt-7">
+              If you want to collaborate or swap ideas (coffee optional), say
+              hi—I&apos;m always glad to learn from other people&apos;s notebooks.
+            </p>
           </div>
         </div>
       </ContentContainer>
