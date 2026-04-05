@@ -1,7 +1,7 @@
 import { PageShell } from "@/components/page-shell";
 import { ContentContainer } from "@/components/content-container";
 import { PageHeader } from "@/components/page-header";
-import { AboutCoordsHeading } from "@/components/about-mit-whereabouts";
+import { AboutWhereaboutsHeading } from "@/components/about-mit-whereabouts";
 
 const SCHOLAR = {
   beneventano:
@@ -38,7 +38,7 @@ export default function AboutPage() {
           align="center"
           className="!mb-8 md:!mb-10 items-center text-center"
           eyebrow="About"
-          title={<AboutCoordsHeading />}
+          title={<AboutWhereaboutsHeading />}
         />
 
         <div className="about-prose-stack mx-auto max-w-[36rem]">

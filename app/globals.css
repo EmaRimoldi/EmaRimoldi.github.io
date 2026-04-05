@@ -148,8 +148,8 @@ body {
     @apply font-serif text-[0.6rem] uppercase tracking-[0.2em] text-[#9A928A] mb-2;
   }
 
-  .about-coords-heading {
-    @apply font-serif text-xs font-medium uppercase tracking-[0.16em] text-[#9A928A] sm:text-sm md:text-base;
+  .about-where-heading {
+    @apply font-serif text-[0.62rem] font-medium leading-snug tracking-[0.02em] text-[#9A928A] sm:text-[0.68rem] md:text-[0.72rem];
   }
 
   /* Titoletto above first bio paragraph: MIT place + local time */
