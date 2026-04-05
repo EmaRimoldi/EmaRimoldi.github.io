@@ -1,5 +1,4 @@
 import { HeroCornerFrame } from "@/components/decorative-elements";
-import { DecorativeRule } from "@/components/page-header";
 
 export function HomeHero() {
   return (
@@ -15,10 +14,6 @@ export function HomeHero() {
           AI researcher exploring intelligence, learning, and useful models:
           theory, agents, and the mathematical foundations of computation.
         </p>
-
-        <div className="flex justify-center py-2 md:py-3" aria-hidden>
-          <DecorativeRule className="opacity-85" />
-        </div>
 
         <blockquote className="mx-auto max-w-2xl space-y-3 px-5 py-2 md:px-8 md:py-4">
           <p className="italic text-sm md:text-base lg:text-lg text-[#251f1d] leading-[1.5]">
