@@ -6,7 +6,7 @@ A minimal, elegant personal website built with Next.js, TypeScript, and Tailwind
 
 - Clean, editorial design with warm off-white background
 - Responsive layout for desktop, tablet, and mobile
-- Multiple sections: Homepage, About, Research, Writing, Photography, Music, Contact
+- Multiple sections: Homepage, About, Research, Writing, Music, Contact
 - Type-safe components and content management
 - Accessibility-focused navigation
 
@@ -56,7 +56,6 @@ website/
 │   ├── about/
 │   ├── research/
 │   ├── writing/
-│   ├── photography/
 │   ├── music/
 │   └── contact/
 ├── components/            # Reusable React components
@@ -73,7 +72,6 @@ website/
 Edit the files in the `content/` directory to update:
 - Blog posts (`blog-posts.ts`)
 - Research items (`research-items.ts`)
-- Photo gallery (`photo-items.ts`)
 - Music albums (`music-items.ts`)
 - Contact links (`contact-links.ts`)
 
@@ -99,14 +97,13 @@ The website follows a calm, editorial aesthetic:
 - **About** (`/about`) — Biographical introduction
 - **Research** (`/research`) — Academic and research projects
 - **Writing** (`/writing`) — Blog posts in a 3-column grid
-- **Photography** (`/photography`) — Image gallery
 - **Music** (`/music`) — Album links to Spotify
 - **Contact** (`/contact`) — Contact information and social profiles
 
 ## Navigation
 
 The site includes persistent top navigation with the following links:
-About, Research, Writing, Photography, Music, Contact
+About, Research, Writing, Music, Contact
 
 ## License
 

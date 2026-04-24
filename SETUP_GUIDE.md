@@ -120,10 +120,6 @@ To update the music collection, edit `content/music-items.ts`:
 - Update titles, artists, Spotify URLs
 - Add corresponding album cover images to `public/images/music/`
 
-### Photography Page
-
-To update the photography gallery, edit `content/photo-items.ts` and add images to `public/images/photography/`.
-
 ## Technical Details
 
 ### Component Architecture
@@ -156,8 +152,6 @@ This ensures consistency: update one file, changes appear everywhere automatical
 
 - **About page**: Shows "Profile image coming soon" if image is missing
 - **Music page**: Shows "Album" placeholder if album cover is missing
-- **Photography**: Shows placeholder if image is missing
-
 All images are optional — the site looks good even before you add them.
 
 ## Deployment

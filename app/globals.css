@@ -226,18 +226,6 @@ body {
     @apply text-[#3e534d] border-b border-dotted border-[#8fa39d] pb-px transition-colors duration-200 hover:text-[#2d3d38] hover:border-[#4d6561];
   }
 
-  /* Photography placeholders: faint ruled texture */
-  .photo-placeholder-tile {
-    background-color: rgba(237, 232, 226, 0.5);
-    background-image: repeating-linear-gradient(
-      -28deg,
-      transparent,
-      transparent 7px,
-      rgba(201, 181, 160, 0.07) 7px,
-      rgba(201, 181, 160, 0.07) 8px
-    );
-  }
-
   /* Blog listing + posts: Newsreader headlines (editorial, matches atelier ink + sienna hover) */
   .blog-card-title {
     font-family: "Newsreader", ui-serif, Georgia, serif;

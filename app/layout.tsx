@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
-  keywords: ["research", "AI", "photography", "music", "writing"],
+  keywords: ["research", "AI", "music", "writing"],
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
