@@ -19,13 +19,16 @@ export function BlogArticleLayout({
       <ContentContainer maxWidth="reading" className="py-16 md:py-24">
         <Link
           href="/blog"
-          className="blog-nav-back mb-10 md:mb-12 inline-block text-xs text-[#5e564e] transition-colors hover:text-[#251f1d] md:text-sm"
+          className="blog-nav-back mb-8 md:mb-10 inline-flex items-center rounded-full border border-[#c4b6a8]/80 bg-[#f0e9e2]/75 px-4 py-2 text-xs text-[#5e564e] transition-all hover:border-[#9a6b52]/40 hover:bg-[#f5eee7] hover:text-[#251f1d] hover:shadow-[0_8px_20px_rgba(37,31,29,0.05)] md:text-sm"
         >
           Back to Blog
         </Link>
 
-        <article className="blog-article">
+        <article className="blog-article rounded-[1.9rem] border border-[#c4b6a8]/80 bg-[#efe8e0]/55 p-6 shadow-[0_1px_3px_rgba(37,31,29,0.04)] md:p-8 lg:p-10">
           <header className="blog-article-header">
+            <p className="mb-4 font-serif text-[0.62rem] uppercase tracking-[0.24em] text-[#7d7268]">
+              Essay
+            </p>
             <h1 className="blog-article-title">{post.title}</h1>
             <p className="blog-article-deck">{post.description}</p>
             <div className="blog-article-meta-panel">
@@ -40,10 +43,10 @@ export function BlogArticleLayout({
           ) : null}
         </article>
 
-        <div className="blog-article-footer-nav mt-20 border-t border-[#c4b6a8]/50 pt-10">
+        <div className="blog-article-footer-nav mt-14 border-t border-[#c4b6a8]/50 pt-8 md:mt-16 md:pt-10">
           <Link
             href="/blog"
-            className="inline-block text-xs text-[#251f1d] transition-opacity hover:opacity-65 md:text-sm"
+            className="inline-flex items-center rounded-full border border-[#c4b6a8]/80 bg-[#f0e9e2]/75 px-4 py-2 text-xs text-[#251f1d] transition-all hover:border-[#9a6b52]/40 hover:bg-[#f5eee7] hover:shadow-[0_8px_20px_rgba(37,31,29,0.05)] md:text-sm"
           >
             Back to all articles
           </Link>

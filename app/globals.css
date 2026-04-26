@@ -230,7 +230,7 @@ body {
   .blog-card-title {
     font-family: "Newsreader", ui-serif, Georgia, serif;
     font-optical-sizing: auto;
-    @apply text-[1.125rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#2a221e] transition-colors duration-300 md:text-[1.35rem];
+    @apply text-[1.18rem] font-semibold leading-[1.15] tracking-[-0.022em] text-[#2a221e] transition-colors duration-300 md:text-[1.42rem];
   }
 
   a.group:hover .blog-card-title {
@@ -254,11 +254,11 @@ body {
   }
 
   .blog-article-deck {
-    @apply mt-5 max-w-2xl font-serif text-sm italic leading-[1.55] text-[#524c48] md:text-base md:leading-[1.5];
+    @apply mt-5 max-w-2xl font-serif text-sm italic leading-[1.62] text-[#524c48] md:text-base md:leading-[1.56];
   }
 
   .blog-article-meta-panel {
-    @apply mt-6 rounded-lg border border-[#c4b6a8]/70 bg-[#f2ebe4]/90 px-3.5 py-3 md:px-4 md:py-3.5;
+    @apply mt-7 rounded-[1.2rem] border border-[#c4b6a8]/70 bg-[#f2ebe4]/95 px-4 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] md:px-5 md:py-4;
   }
 
   .blog-article-rule {
@@ -270,11 +270,22 @@ body {
   }
 
   .blog-article-body p {
-    @apply font-serif text-[0.9rem] leading-[1.76] text-[#403a36] md:text-[0.95rem] md:leading-[1.78];
+    @apply font-serif text-[0.95rem] leading-[1.84] text-[#403a36] md:text-[1rem] md:leading-[1.86];
+    text-wrap: pretty;
   }
 
   .blog-article-lead {
-    @apply text-[0.95rem] leading-[1.7] text-[#36322f] md:text-[1rem] md:leading-[1.72];
+    @apply text-[1rem] leading-[1.78] text-[#36322f] md:text-[1.05rem] md:leading-[1.8];
+  }
+
+  .blog-article-lead::first-letter {
+    float: left;
+    margin-right: 0.1em;
+    margin-top: 0.08em;
+    font-family: "Newsreader", ui-serif, Georgia, serif;
+    font-size: 3.3rem;
+    line-height: 0.82;
+    color: #9a6b52;
   }
 
   .blog-article-footer-nav a::before {
