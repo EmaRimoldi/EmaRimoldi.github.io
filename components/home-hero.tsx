@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { HeroCornerFrame } from "@/components/decorative-elements";
 
 export function HomeHero() {
@@ -5,7 +7,17 @@ export function HomeHero() {
     <main className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-16 text-center pt-6 md:pt-12">
       <HeroCornerFrame />
 
-      <div className="relative z-10 w-full self-stretch space-y-6 md:space-y-10">
+      <div className="relative z-10 w-full self-stretch space-y-5 md:space-y-8">
+        <Image
+          src="/images/about/id.jpeg"
+          alt="Emanuele Rimoldi"
+          width={1254}
+          height={1254}
+          priority
+          className="mx-auto h-auto w-[clamp(7.5rem,16vw,11rem)] rounded-[2px] border border-[#c4b6a8]/90 object-cover shadow-[0_1px_10px_rgba(37,31,29,0.08)]"
+          sizes="(max-width: 768px) 7.5rem, 11rem"
+        />
+
         <h1 className="text-lg md:text-2xl lg:text-3xl font-medium tracking-[-0.02em] text-[#251f1d] leading-[1.1]">
           Emanuele Rimoldi
         </h1>

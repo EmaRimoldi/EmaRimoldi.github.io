@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const SRC = "/images/about/id.png";
+const SRC = "/images/about/id.jpeg";
 
 export function AboutPortrait() {
   const [error, setError] = useState(false);
