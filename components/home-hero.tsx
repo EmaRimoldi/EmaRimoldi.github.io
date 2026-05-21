@@ -8,15 +8,17 @@ export function HomeHero() {
       <HeroCornerFrame />
 
       <div className="relative z-10 w-full self-stretch space-y-5 md:space-y-8">
-        <Image
-          src="/images/about/id.jpeg"
-          alt="Emanuele Rimoldi"
-          width={1254}
-          height={1254}
-          priority
-          className="mx-auto h-auto w-[clamp(7.5rem,16vw,11rem)] rounded-[2px] border border-[#c4b6a8]/90 object-cover shadow-[0_1px_10px_rgba(37,31,29,0.08)]"
-          sizes="(max-width: 768px) 7.5rem, 11rem"
-        />
+        <div className="mx-auto flex size-[clamp(9rem,18vw,13rem)] items-center justify-center rounded-full border border-[#c4b6a8]/90 bg-[#e2dad2]/75 p-1.5 shadow-[0_2px_14px_rgba(37,31,29,0.09)]">
+          <Image
+            src="/images/about/id.jpeg"
+            alt="Emanuele Rimoldi"
+            width={1254}
+            height={1254}
+            priority
+            className="h-full w-full rounded-full object-cover"
+            sizes="(max-width: 768px) 9rem, 13rem"
+          />
+        </div>
 
         <h1 className="text-lg md:text-2xl lg:text-3xl font-medium tracking-[-0.02em] text-[#251f1d] leading-[1.1]">
           Emanuele Rimoldi
