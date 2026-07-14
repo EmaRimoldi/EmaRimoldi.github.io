@@ -19,6 +19,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "the-reddit-brain",
+    title: "The Reddit Brain",
+    description:
+      "A short introduction to an interactive, brain-inspired map of Reddit's social dynamics.",
+    href: "/blog/the-reddit-brain",
+    location: "Cambridge, MA",
+    language: "English",
+    publishedAt: "2026-07-14",
+    readingTimeMinutes: 4,
+    tags: ["Network Science", "Reddit", "Visualization"],
+  },
+  {
     slug: "learning-through-structure",
     title: "On Learning Through Structure",
     description:
